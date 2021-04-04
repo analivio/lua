@@ -1,13 +1,3358 @@
-/**
- * @name Translucence
- * @version 1.0.6.3
- * @description A translucent/frosted glass Discord theme
- * @author CapnKitten
- * 
- * @website http://github.com/CapnKitten
- * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Translucence/css/source.css
- * @donate https://paypal.me/capnkitten
- * @invite jzJkA6Z
- */
+:raiz {
+--app-bg:url(https://imgur.com/fMD99GD);
+  --app-blur: 6px;
+  --app-margin: 24px;
+  --app-radius: 8px;
+  --app-accent: # d73d3d;
+  --app-accent-image: nenhum;
+  --app-accent-rgb: 215,61,61;
+  --app-accent-text: # 000;
+  --sidebar-color: rgba (0,0,0,0.4);
+  - sidebar-blur: 12px;
+  --main-content-color: rgba (0,0,0,0.2);
+  --main-content-blur: 4px;
+  --messages-color: rgba (0,0,0,0.4);
+  --messages-radius: var (- app-radius);
+  --messages-padding: 8px;
+  --mention-color: var (- app-accent);
+  --mention-rgb: var (- app-accent-rgb);
+  --mention-alt: # 5274e9;
+  --notification-color: #fff;
+  --textarea-color: 0,0,0;
+  --textarea-text-color: #fff;
+  --textarea-radius: 22px;
+  --input-height: 36px;
+  --input-radius: calc (var (- input-height) / 2);
+  --card-color: rgba (0,0,0,0.4);
+  --card-color-hover: rgba (0,0,0,0.5);
+  - seleção da cor do cartão: rgba (0,0,0,0.7);
+  --card-radius: var (- app-radius);
+  --button-color: var (- app-accent);
+  --button-action-color: # 000;
+  --button-text-color: var (- app-accent-text);
+  --button-radius: var (- app-radius);
+  --button-alt-color: var (- card-color);
+  --popout-color: rgba (0,0,0,0,55);
+  --popout-blur: 5px;
+  - opacidade-cabeçalho-pop: 0,3;
+  --popout-header-shadow: 0px 3px 9px 0px rgba (0,0,0,0.25);
+  --popout-radius: var (- app-radius);
+  --popout-shadow: 0 8px 10px 1px rgba (0,0,0,0.14), 0 3px 14px 2px rgba (0,0,0,0.12), 0 5px 5px -3px rgba (0,0,0,0.2 );
+  - cor de exibição: 114,137,218;
+  --streaming-color: 89,54,149;
+  --spotify-color: 29,185,84;
+  --interactive-normal: #aaa;
+  --interactive-hover: #ddd;
+  --interactive-active: #fff;
+  --interactive-muted: # 777;
+  --channels-default: #aaa;
+  --header-secondary: #dfdfdf;
+  --background-primary: transparente;
+  --background-modifier-hover: rgba (255,255,255,0,075);
+  --background-modifier-selected: rgba (255,255,255,0,125);
+  --channels-default: var (- interativo-normal);
+  --texto-mudo: var (- interativo-normal);
+  --tempo de transição: 250ms;
+  --tipo de transição: cúbico-bezier (0.4,0,0.2,1);
+  --scrollbar-color: 0,0,0;
+  --scrollbar-color-alt: 255,255,255;
+  --scrollbar-opacity: 0,5;
+  --scrollbar-opacity-hover: 0,7;
+  --scrollbar-width: 10px; }
 
-@import url(https://capnkitten.github.io/BetterDiscord/Themes/Translucence/css/source.css);
+/ *
+ *
+ * APP ELEMENTS
+ *
+ * /
+corpo {
+  cor de fundo: transparente; }
+
+.appMount-3lHmkl {
+  imagem de fundo: var (- app-bg);
+  repetição de fundo: sem repetição;
+  posição de fundo: centro;
+  tamanho do fundo: capa; }
+
+.layers-3iHuyZ {
+  índice z: 1; }
+
+.layers-3iHuyZ {
+  margem: calc (var (- margem do aplicativo) / 2) var (- margem do aplicativo) var (- margem do aplicativo) var (- margem do aplicativo);
+  border-radius: var (- app-radius);
+  estouro: oculto; }
+  .layers-3iHuyZ: antes de {
+    posição: absoluta;
+    contente: " ";
+    largura: calc (100% + (var (- margem app) * 2));
+    altura: calc (100% + (var (- margem app) * 2) + 24px);
+    superior: calc ((var (- app-margin) + 24px) * -1);
+    esquerda: calc (var (- app-margin) * -1);
+    imagem de fundo: var (- app-bg);
+    repetição de fundo: sem repetição;
+    posição de fundo: centro;
+    tamanho do fundo: capa;
+    anexo de fundo: fixo;
+    filtro: blur (var (- app-blur));
+    eventos de ponteiro: nenhum;
+    índice z: -1; }
+
+.typeMacOS-3EmCyP + .app-1q1i1E .layers-3iHuyZ {
+  margem: var (- margem app); }
+
+.app-2rEoOp,
+.bg-h5JY_x {
+  cor de fundo: transparente; }
+
+.appMount-3lHmkl * {
+  sombra do texto: 0px 1px 2px rgba (0, 0, 0, 0,5); }
+
+.anchor-3Z-8Bb {
+  cor: var (- app-accent); }
+
+.appMount-3lHmkl svg {
+  filtro: sombra projetada (0px 1px 2px rgba (0, 0, 0, 0,5)); }
+
+:: selection {
+  fundo: rgba (var (- app-accent-rgb), 0,65);
+  cor: var (- app-accent-text); }
+
+/ * ELEMENTOS DO APP -> BARRA SUPERIOR * /
+.titleBar-AC4pGV {
+  altura: 24px; }
+
+.wordmarkWindows-1v0lYD {
+  cor: #fff; }
+
+.withFrame-haYltI {
+  margem superior: 0; }
+
+.winButton-iRh8-Z {
+  altura: 100%;
+  topo: 0;
+  cor: #fff; }
+
+.platform-osx .wrapper-3NnKdC {
+  margem superior: 0; }
+.platform-osx .tree-3tCaw8 {
+  margem superior: 32px; }
+
+.typeMacOS-3EmCyP {
+  topo: var (- margem do aplicativo);
+  esquerda: var (- margem do aplicativo); }
+  .typeMacOS-3EmCyP .macButtons-2MuSAC {
+    largura: 72px;
+    border-top-left-radius: var (- app-radius); }
+    .typeMacOS-3EmCyP .macButtons-2MuSAC .macButton-c_Adir {
+      cursor: ponteiro; }
+
+.topic-TCb_qw a {
+  cor: var (- app-accent); }
+
+/ * ELEMENTOS DO APP -> BARRA DE NOTIFICAÇÃO * /
+.notice-2FJMB4,
+.notice-1tZwqv,
+.noticeWrapper-8z511t,
+.colorInfo-2URYW5,
+.noticeSurvey-1XW9Ln.noticeInfo-3_iTE1.notice-2FJMB4.size14-3iUx6q.height36-36OHCc {
+  / * margem: 0 var (- margem do aplicativo); * /
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  / * border-radius: 18px! important; * /
+  raio da borda: 0;
+  border-top-right-radius: var (- app-radius);
+  sombra da caixa: nenhum;
+  cor: var (- app-accent-text); }
+
+.notice-3bPHh-,
+.noticeStreamerMode-2TSQpg {
+  margem: 0;
+  cor de fundo: rgba (var (- cor de streaming), 0,5);
+  raio da fronteira: 0! importante;
+  cor: #fff; }
+
+.notice-2FJMB4 + .notice-2FJMB4 {
+  margem superior: 4px; }
+
+#outdatedPlugins> span,
+#pluginNotice #outdatedPlugins span {
+  cor: var (- app-accent-text)! importante; }
+
+.notice-2FJMB4 .button-1MICoQ {
+  cor: var (- app-accent-text); }
+
+.noticeStreamerMode-2TSQpg .button-1MICoQ {
+  cor: #fff; }
+
+/ * ELEMENTOS DO APP -> BARRA DE NOTIFICAÇÃO -> BOTÕES * /
+.notice-1tZwqv .lookOutlined-3sRXeN.colorWhite-rEQuAQ {
+  cor: var (- app-accent-text);
+  border-color: var (- app-accent-text); }
+
+.notice-1tZwqv .button-3Ijpww: hover {
+  cor de fundo: transparente; }
+
+/ * ELEMENTOS DO APP -> ÍCONE DE CARREGAMENTO * /
+@keyframes spinnerone {
+  0% {
+    -webkit-transform: rotate (0deg);
+    transformar: girar (0deg); }
+  75% {
+    -webkit-transform: rotate (-720deg);
+    transformar: girar (-720deg); }
+  100% {
+    -webkit-transform: rotate (-720deg);
+    transformar: girar (-720deg); }}
+@keyframes spinnertwo {
+  0% {
+    -webkit-transform: rotate (0deg);
+    transformar: girar (0deg); }
+  75% {
+    -webkit-transform: rotate (720deg);
+    transformar: girar (720deg); }
+  100% {
+    -webkit-transform: rotate (720deg);
+    transformar: girar (720deg); }}
+.spinner-2enMB9: não (.ti-indicador) {
+  - tamanho do girador: 2em; }
+
+.spinner-2enMB9: não (.ti-indicador) .inner-1gJC7_ {
+  largura: calc (var (- tamanho do spinner) * 1.175);
+  altura: calc (var (- tamanho do spinner) * 1,175); }
+
+.spinningCircleInner-mbM5zM {
+  transformar: girar (0deg); }
+
+.spinningCircleInner-mbM5zM: antes,
+.spinningCircleInner-mbM5zM: após {
+  contente: " "; }
+
+.wanderingCubesItem-WPXqao,
+.spinningCircleInner-mbM5zM: antes,
+.spinningCircleInner-mbM5zM: após {
+  posição: absoluta;
+  display: bloco embutido;
+  cor de fundo: transparente;
+  borda: calc (var (- spinner-size) / 12) transparente sólido;
+  border-color: var (- app-accent) transparente var (- app-accent) transparente; }
+
+.wanderingCubesItem-WPXqao: primeiro do tipo,
+.spinningCircleInner-mbM5zM: antes de {
+  largura: calc (var (- tamanho do spinner) / 2);
+  altura: calc (var (- tamanho do spinner) / 2);
+  raio da borda: calc (var (- tamanho do spinner) / 2);
+  margem: calc (var (- tamanho do spinner) / 4) 0 0 calc (var (- tamanho do spinner) / 4);
+  -webkit-animation: spinnerone 2000ms fácil-em-out infinito;
+  -moz-animation: spinnerone 2000ms fácil-em-out infinito;
+  animação: spinnerone 2000ms com facilidade de entrada infinita; }
+
+.wanderingCubesItem-WPXqao: último do tipo,
+.spinningCircleInner-mbM5zM: após {
+  largura: var (- tamanho do spinner);
+  altura: var (- tamanho do spinner);
+  raio da borda: var (- tamanho do spinner);
+  -webkit-animation: spinnertwo 2000ms fácil-em-out infinito;
+  -moz-animation: spinnertwo 2000ms fácil-em-out infinito;
+  animação: spinnertwo 2000ms facilitado infinito; }
+
+.circular-2NaZOq {
+  Mostrar nenhum; }
+
+/ *
+ *
+ * MODALS
+ *
+ * /
+.appMount-3lHmkl [role = menu],
+.userPopout-3XzG_A,
+.root-1gCeng,
+.root-SR8cQa,
+.root-2QSv-c,
+.root-3JVdIJ,
+.modalRoot-1Kx4Hb,
+.modal-yWgWj-,
+.wrapper-2aW0bm,
+.authBox-hW6HRx,
+.quickswitcher-3JagVE,
+.popout-38lTFE,
+.wrapper-1rqM3x,
+.messagesPopoutWrap-1MQ1bW,
+.container-enaOkj,
+.noiseCancellationPopout-iRK2A0,
+[class * = "theme-"] .uploadModal-2ifh8j,
+.attachPopout-36hjtN,
+.container-3ayLPN,
+.container-2x5lvQ,
+.streamPreview-2-WUWT,
+.incomingCallInner-2VmFiR,
+.addGamePopout-2RY8Ju,
+.container-2dqNWc,
+.container-2VW0UT,
+.sidebar-2K8pFh.hideElement .container-3baos1,
+.popoutContainer-1MXdqN,
+.popoutWrapper-eJpzc1,
+.participantsButton-KYW-IW,
+.subscribeTooltipWrapper-32-Ce8,
+.container-3LUQwT,
+.popout-VcNcHB,
+.container-3XJ8ns,
+.attachPopout-36hjtN,
+.contentWrapper-SvZHNd,
+.autocomplete-3l_oCd,
+.autocomplete-1vrmpx,
+.container-2VW0UT,
+.sidebar-2K8pFh.hideElement .container-3baos1,
+.guildSettingsAuditLogsUserFilterPopout-3Jg5NE {
+  posição: relativa;
+  cor de fundo: transparente;
+  border-radius: var (- popout-radius);
+  box-shadow: var (- popout-shadow)! important;
+  / * overflow: hidden; * /}
+
+.appMount-3lHmkl [role = menu]: antes,
+.userPopout-3XzG_A: antes,
+.root-1gCeng: antes,
+.root-SR8cQa: antes,
+.root-2QSv-c: antes,
+.root-3JVdIJ: antes,
+.modalRoot-1Kx4Hb: antes,
+.modal-yWgWj-: antes,
+.container-1r6BKw.themed-ANHk51: antes,
+.wrapper-2aW0bm: antes,
+.authBox-hW6HRx: antes,
+.channelHeader-3Gd2xq: antes,
+.quickswitcher-3JagVE: antes,
+.popout-38lTFE: antes,
+.wrapper-1rqM3x: antes,
+.messagesPopoutWrap-1MQ1bW: antes,
+.container-enaOkj: antes,
+.noiseCancellationPopout-iRK2A0: antes,
+.uploadModal-2ifh8j: antes,
+.container-3ayLPN: antes,
+.toolbar-2bjZV7: depois,
+. torrada: antes,
+.bd-toast: antes,
+.popout-2sKjHu: antes,
+.css-n57xjs-menu: antes,
+.css-3vaxre-menu: antes,
+.popoutList-T9CKZQ: antes,
+.container-VSDcQc: antes,
+.bgScale-1otPtc: antes,
+.container-2x5lvQ: antes,
+.streamPreview-2-WUWT: antes,
+.incomingCallInner-2VmFiR: antes,
+.contentWrapper-3WC1ID: antes,
+.addGamePopout-2RY8Ju: antes,
+.container-2dqNWc: antes,
+.popoutContainer-1MXdqN: antes,
+.popoutWrapper-eJpzc1: antes,
+.participantsButton-KYW-IW: antes,
+.subscribeTooltipWrapper-32-Ce8: antes,
+.container-3LUQwT: antes,
+.popout-VcNcHB: antes,
+.container-3XJ8ns: antes,
+.attachPopout-36hjtN: antes,
+.contentWrapper-SvZHNd: antes,
+.autocomplete-3l_oCd: antes,
+.autocomplete-1vrmpx: antes,
+.container-2VW0UT: antes,
+.sidebar-2K8pFh.hideElement .container-3baos1: antes,
+.guildSettingsAuditLogsUserFilterPopout-3Jg5NE: before {
+  posição: absoluta;
+  contente: " ";
+  largura: 100%;
+  altura: 100%;
+  topo: 0;
+  esquerda: 0;
+  cor de fundo: var (- cor de popout);
+  border-radius: var (- popout-radius);
+  filtro de fundo: blur (var (- popout-blur));
+  eventos de ponteiro: nenhum;
+  transição: var (- tempo de transição) var (- tipo de transição);
+  índice z: -1; }
+
+.appMount-3lHmkl [role = menu]: antes de {
+  índice z: automático; }
+
+/ * substitutos * /
+.attachPopout-36hjtN,
+.contentWrapper-SvZHNd,
+.autocomplete-3l_oCd,
+.autocomplete-1vrmpx,
+.popouts-2bnG9Z .userPopout-3XzG_A,
+.container-2VW0UT,
+.guildSettingsAuditLogsUserFilterPopout-3Jg5NE {
+  estouro: oculto; }
+
+.attachPopout-36hjtN: antes,
+.contentWrapper-SvZHNd: antes,
+.autocomplete-3l_oCd: antes,
+.autocomplete-1vrmpx: antes,
+.popouts-2bnG9Z .userPopout-3XzG_A: antes,
+.container-2VW0UT: antes,
+.sidebar-2K8pFh.hideElement .container-3baos1: antes,
+.guildSettingsAuditLogsUserFilterPopout-3Jg5NE: before {
+  altura: calc (100% + var (- popout-blur) * 5);
+  largura: calc (100% + var (- popout-blur) * 5);
+  topo: calc (var (- popout-blur) / -1 * 2.5);
+  esquerda: calc (var (- popout-blur) / -1 * 2,5);
+  cor de fundo: transparente;
+  imagem de fundo: var (- app-bg);
+  repetição de fundo: sem repetição;
+  posição de fundo: centro;
+  tamanho do fundo: capa;
+  anexo de fundo: fixo;
+  sombra da caixa: inserção 0 0 0 100vmax rgba (0, 0, 0, 0,65);
+  filtro: desfoque (var (- popout-blur));
+  filtro de fundo: nenhum; }
+
+/ * * /
+.backdrop-1wrmKB,
+.backdropWithLayer-3_uhz4 {
+  cor de fundo: rgba (0, 0, 0, 0,3)! importante;
+  filtro de fundo: desfoque (calc (var (- popout-blur) * 1.4));
+  opacidade: 1! importante; }
+
+.popouts-2bnG9Z + div: not (: vazio) + div: not ([classe]) + .layerContainer-yqaFcK .backdropWithLayer-3_uhz4 {
+  opacidade: 0! importante; }
+
+[classe * = "tema-"] .modal-yWgWj-,
+[class * = "theme-"] .footer-2gL1pp,
+[classe * = "tema-"] .footer-3mqk7D,
+[class * = "theme-"] .popout-38lTFE,
+.messagesPopoutWrap-1MQ1bW {
+  cor de fundo: transparente; }
+
+.root-1gCeng .modal-yWgWj-: antes de {
+  Mostrar nenhum; }
+
+.small-3iVZYw {
+  altura mínima: 100px; }
+
+.header-1TKi98,
+.header-1TKi98.separator-2-RRj_ {
+  box-shadow: var (- popout-header-shadow); }
+
+.content-1LAB8Z {
+  acolchoamento superior: 16px; }
+
+[classe * = "theme-"] .footer-2gL1pp {
+  sombra da caixa: nenhum; }
+
+/ * MODALS -> TOOLTIPS * /
+.subscribeTooltipWrapper-32-Ce8: após {
+  Mostrar nenhum; }
+
+/ * MODALS -> LOGIN * /
+[class * = "theme-"] .authBox-hW6HRx {
+  cor de fundo: var (- cor de popout); }
+
+[class * = "theme-"] .authBox-hW6HRx: antes de {
+  imagem de fundo: nenhuma; }
+
+.image-2jyRAK,
+.canvas-3XuBXe,
+.fallbackImage-31Sk4m {
+  Mostrar nenhum; }
+
+.leftSplit-1qOwnR {
+  largura máxima: 100%; }
+
+/ * MODALS -> CRIAR SERVIDOR * /
+.container-1CE3eW {
+  --modal-header-text: #ddd;
+  --modal-normal-text: #aaa; }
+  .container-1CE3eW .header-3msK0M,
+  .container-1CE3eW .header-287ONi,
+  .container-1CE3eW .header-1TKi98 {
+    preenchimento: 24px 16px 12px; }
+
+.header-3msK0M .title-3w8xhj,
+.header-287ONi .title-Z_XiOC,
+.header-1TKi98 .title-XLSR78,
+.footer-1NnaNd .colorStandard-2KCXvj {
+  cor: var (- texto-cabeçalho modal); }
+
+.container-1CE3eW .colorHeaderSecondary-3Sp3Ft {
+  cor: var (- modal-normal-text); }
+
+.container-1CE3eW .lookBlank-3eh9lL,
+[class * = "theme-"] .container-1CE3eW .lookLink-9FtZy-.colorPrimary-3b3xI6 {
+  cor: var (- modal-normal-text); }
+
+.iconContainer-2B0ixr path {
+  preencher: var (- modal-normal-text); }
+
+.iconContainer-2B0ixr circle {
+  preencher: var (- app-accent); }
+
+.iconContainer-2B0ixr circle + path {
+  preencher: var (- app-accent-text); }
+
+[class * = "theme-"] .footer-1NnaNd {
+  sombra da caixa: nenhum; }
+
+/ * MODALS -> CRIAR SERVIDOR -> OPÇÕES * /
+.templatesList-2E6rTe {
+  margem superior: 0;
+  acolchoamento superior: 16px; }
+
+.container-UC8Ug1 {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão);
+  fronteira: nenhum; }
+  .container-UC8Ug1: hover {
+    background-color: var (- card-color-hover); }
+  .container-UC8Ug1 .colorStandard-2KCXvj {
+    cor: var (- modal-normal-text); }
+
+/ * MODALS -> JOIN SERVER * /
+.input - jS-j2 {
+  cor de fundo: transparente; }
+
+.formTitle-aeXUoN {
+  cor: var (- modal-normal-text); }
+
+.sampleLink-2NLvZg {
+  cor: # 999; }
+
+/ * MODALS -> MENSAGENS PINADAS * /
+.iconBadge-qZ4Ksk {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  sombra da caixa: 0px 1px 2px rgba (0, 0, 0, 0,5); }
+
+# mensagens fixadas,
+.messagesPopoutWrap-1MQ1bW {
+  altura máxima: 80vh! importante; }
+
+.header-ykumBX {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+.messagesPopout-24nkyi {
+  preenchimento: 16px 0 0 8px; }
+
+.messageGroupWrapper-o-Zw7G {
+  margin-bottom: 16px;
+  cor de fundo: transparente;
+  fronteira: nenhum; }
+  .messageGroupWrapper-o-Zw7G .messageGroupCozy-2iY6cT {
+    margem esquerda: 56px! importante;
+    margem direita: 16px! importante;
+    cor de fundo: var (- cor da mensagem);
+    border-radius: var (- mensagens-radius); }
+    .messageGroupWrapper-o-Zw7G .messageGroupCozy-2iY6cT .contents-2mQqc9,
+    .messageGroupWrapper-o-Zw7G .messageGroupCozy-2iY6cT .container-1ov-mD {
+      estouro: oculto; }
+
+.footer-1kmXd4 {
+  cor de fundo: transparente; }
+
+/ * MODALS -> SEARCH SERVER * /
+[class * = "theme-"] .container-3ayLPN {
+  cor de fundo: transparente; }
+
+[class * = "theme-"] .option-96V44q.selected-rZcOL- {
+  background-color: var (- background-modifier-hover); }
+
+.option-96V44q: após {
+  Mostrar nenhum; }
+
+[classe * = "tema-"] .focused-2bY0OD {
+  cor de fundo: transparente; }
+
+[class * = "theme-"] .queryContainer-RKFJW- {
+  fronteira: nenhum;
+  box-shadow: var (- popout-header-shadow); }
+
+.resultsGroup-r_nuzN: antes de {
+  Mostrar nenhum; }
+
+/ * MODALS -> CAIXA DE ENTRADA * /
+.scroller-2UmRce,
+.scroller-tlc3kG {
+  margem superior: 16px;
+  preenchimento: 0 16px 8px 16px; }
+
+.container-3iAQ-0,
+.channel-3pEHab {
+  margem: 0;
+  margin-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0; }
+
+.channel-3pEHab {
+  margem: 0 0 24px;
+  acolchoamento inferior: 0; }
+
+.channelHeader-3Gd2xq,
+.messageContainer-gbhlwo {
+  cor de fundo: transparente; }
+
+.channelHeader-3Gd2xq {
+  preenchimento: 12px 16px;
+  cor de fundo: transparente; }
+  .channelHeader-3Gd2xq: antes de {
+    cor de fundo: var (- cor da mensagem);
+    border-radius: var (- mensagens-radius); }
+
+.messageContainer-gbhlwo,
+.messageContainer-1ei2zM {
+  preenchimento: 16px 0; }
+  .messageContainer-gbhlwo .cozy-3raOZG.wrapper-2a6GCs,
+  .messageContainer-1ei2zM .cozy-3raOZG.wrapper-2a6GCs {
+    margem esquerda: 88px;
+    margem direita: 0; }
+    .messageContainer-gbhlwo .cozy-3raOZG.wrapper-2a6GCs: not (.groupStart-23k01U),
+    .messageContainer-1ei2zM .cozy-3raOZG.wrapper-2a6GCs: not (.groupStart-23k01U) {
+      margem superior: 2px; }
+
+.message-2DieIs,
+.message-2g38UB {
+  estouro: visível; }
+
+.messages-3G3erD {
+  preenchimento: 16px 0;
+  cor de fundo: transparente; }
+
+.container-1ov-mD {
+  estouro: oculto; }
+
+/ * MODALS -> USER POPOUT * /
+[class * = "theme-"] .headerNormal-T_seeN {
+  cor de fundo: rgba (0, 0, 0, var (- popout-header-opacity)); }
+
+.headerPlaying-j0WQBV {
+  cor de fundo: rgba (var (- agora cor de exibição), var (- popout-header-opacity)); }
+
+.headerStreaming-2FjmGz {
+  cor de fundo: rgba (var (- streaming-color), var (- popout-header-opacity)); }
+
+.headerSpotify-zpWxgT {
+  cor de fundo: rgba (var (- spotify-color), var (- popout-header-opacity)); }
+
+.headerStreaming-2FjmGz .anchor-3Z-8Bb,
+.headerSpotify-zpWxgT .anchor-3Z-8Bb {
+  cor: #fff; }
+
+[class * = "theme-"] .root-1gCeng {
+  cor de fundo: transparente; }
+
+[class * = "theme-"] .body-3iLsc4,
+[class * = "theme-"] .footer-1fjuF6 {
+  cor de fundo: transparente; }
+
+.note-3HfJZ5 .textarea-2r0oV8 {
+  cor de fundo: transparente! importante; }
+
+.footer-1fjuF6 {
+  preenchimento: 8px 16px 16px; }
+
+.quickMessage-1yeL4E {
+  raio da borda: 18px! importante; }
+
+/ * MODALS -> PERFIL DE USUÁRIO * /
+.topSectionNormal-2-vo2m {
+  cor de fundo: rgba (0, 0, 0, var (- popout-header-opacity)); }
+
+.topSectionPlaying-1J5E4n {
+  cor de fundo: rgba (var (- agora cor de exibição), var (- popout-header-opacity)); }
+
+.topSectionStreaming-1Tpf5X {
+  cor de fundo: rgba (var (- streaming-color), var (- popout-header-opacity)); }
+
+.topSectionSpotify-1lI0-P {
+  cor de fundo: rgba (var (- spotify-color), var (- popout-header-opacity)); }
+
+.topSectionStreaming-1Tpf5X .anchor-3Z-8Bb,
+.topSectionSpotify-1lI0-P .anchor-3Z-8Bb {
+  cor: #fff; }
+
+.body-3ND3kc {
+  cor de fundo: transparente; }
+
+.note-QfFU8y textarea {
+  preenchimento: 9px 8px;
+  border-radius: var (- input-radius); }
+
+/ * MODALS -> UPLOAD * /
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K {
+  altura: 91px;
+  margin-bottom: 8px; }
+  .uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr,
+  .uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.audio-14DQXq {
+    largura: 76px;
+    altura: 76px;
+    margem superior: 0;
+    background-size: contém; }
+  .uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.image-2yrs5j {
+    largura: 76px;
+    altura: 76px;
+    margem superior: 12px;
+    cor de fundo: var (- cor do cartão); }
+  .uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr: not (.image-2yrs5j) + .description-2ug5H_ {
+    margem superior: 28px; }
+
+.channelTextAreaUpload-3t7EIx {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 22px; }
+
+/ * MODALS -> UPLOAD -> DRAG AND DROP * /
+.uploadArea-3QgLtW {
+  altura: 100vh;
+  topo: -24px;
+  cor de fundo: rgba (0, 0, 0, 0,3)! importante;
+  filtro de fundo: desfoque (calc (var (- popout-blur) * 1.4)); }
+
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .bgScale-1otPtc {
+  cor de fundo: transparente;
+  border-radius: var (- popout-radius);
+  sombra da caixa: var (- sombra da janela); }
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo {
+  fronteira: nenhum; }
+
+/ * MODALS -> CONVIDAR * /
+.header-2Pz98J .inner-3ErfOT {
+  altura: 36px;
+  preenchimento: 0 8px; }
+  .header-2Pz98J .inner-3ErfOT .input-1Rv96N {
+    altura: 100%;
+    margem: 0; }
+  .header-2Pz98J .inner-3ErfOT .iconLayout-1WxHy4 {
+    altura: 100%; }
+
+.scroller-2hZ97C {
+  padding-right: 12px! importante; }
+
+/ * MODALS -> CONVIDADOS PARA SERVIDOR * /
+[classe * = "theme-"] .contentWrapper-3WC1ID {
+  cor de fundo: transparente; }
+
+.pill-1dHPfk {
+  cor de fundo: var (- cor de popout); }
+
+.inviteSplash-40aHus {
+  border-radius: 0 var (- popout-radius) var (- popout-radius) 0; }
+
+/ * MODALS -> CONVIDADOS PARA SERVIDOR -> COISAS DE BOAS-VINDAS * /
+.optionContainer-15srkc {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+  .optionContainer-15srkc: hover {
+    background-color: var (- card-color-hover); }
+
+/ *
+ *
+ * MENU CONTEXTUAL
+ *
+ * /
+.item-1tOPte {
+  border-radius: var (- popout-radius); }
+
+.colorDefault-2K3EoJ.focused-3afm-j,
+.colorDefault-2K3EoJ: ativo: não (.hideInteraction-1iHO1O) {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+/ *
+ *
+ * BOTÕES
+ *
+ * /
+.button-38aScr {
+  raio da borda: var (- raio do botão); }
+
+.centerButton-3CaNcJ {
+  raio da borda: 50%; }
+
+.lookLink-9FtZy-.colorBrand-3pXr91 {
+  cor: var (- app-accent); }
+
+/ * BUTTONS -> ACCENT BACKGROUND-COLOR * /
+/*.lookFilled-1Gx00P.colorBrand-3pXr91,
+[class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6,
+[class * = "theme-"] .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV: hover,
+[class * = "theme-"] .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV: ativo,
+.lookFilled-1Gx00P.colorGreen-29iAKY,
+.lookFilled-1Gx00P.colorGrey-2DXtkV,
+.lookInverted-2D7oAl.colorBrand-3pXr91,
+.button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp,
+.button-1YfofB.buttonColor-7qQbGO.fauxDisabled-2ik0Vw,
+.button-1YfofB.buttonColor-7qQbGO: desativado,
+[class * = "theme-"] .questionMark-CWEQZn,
+[class * = "theme-"] .questionMark-CWEQZn .icon-3a_Jgd,
+.button-3HqqDX,
+.bd-pfbtn,
+.bd-addon-list .bd-card-footer button {
+	cor: var (- botão-cor-do-texto);
+	estouro: oculto;
+} * /
+/*.lookFilled-1Gx00P,
+.lookOutlined-3sRXeN, * /
+[class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6, [class * = "theme-"] .lookFilled-1Gx00P. colorGreen-29iAKY, [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV, [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan, [class * = "theme-"]. lookFilled-1Gx00P.primaryDark-3mSFDl, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS,
+[class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91,
+[class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6,
+[class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY,
+[class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV,
+[class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan,
+[class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl,
+[class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp,
+[class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS,
+.colorable-1bkp8v.colorBrand-3pXr91,
+.colorable-1bkp8v.colorPrimary-3b3xI6,
+.colorable-1bkp8v.colorGreen-29iAKY,
+.colorable-1bkp8v.colorGrey-2DXtkV,
+.colorable-1bkp8v.colorRed-1TFJan,
+.colorable-1bkp8v.primaryDark-3mSFDl,
+.colorable-1bkp8v.white-3GPOIp,
+.colorable-1bkp8v.white-3GPOIp.active-1QRrIS {
+  cor de fundo: var (- cor do botão);
+  fronteira: nenhum;
+  estouro: oculto; }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91: hover, [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91: active, [class * = "theme-"]. lookFilled-1Gx00P.colorBrand-3pXr91: disabled, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: hover, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: ativo, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: disabled, [class * = "theme-"] .lookFilled-1Gx00P.colorGreen-29iAKY: hover, [class * = "theme-"]. lookFilled-1Gx00P.colorGreen-29iAKY: ativo, [class * = "theme-"] .lookFilled-1Gx00P.colorGreen-29iAKY: desativado, [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV: pairar, [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV: ativo, [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV: disabled, [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan: hover, [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan: active, [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan: disabled, [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl: hover, [class * = "theme-"] .lookFilled-1Gx00P. primaryDark-3mSFDl: active, [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl: disabled, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp: hover, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp: ativo, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp: disabled, [class * = "theme-"] .lookFilled-1Gx00P. white-3GPOIp.active-1QRrIS: hover, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS: active, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp: desativado,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS: hover,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS: ativo,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS: desativado,
+  .colorable-1bkp8v.colorBrand-3pXr91: hover,
+  .colorable-1bkp8v.colorBrand-3pXr91: ativo,
+  .colorable-1bkp8v.colorBrand-3pXr91: desativado,
+  .colorable-1bkp8v.colorPrimary-3b3xI6: passar o mouse,
+  .colorable-1bkp8v.colorPrimary-3b3xI6: ativo,
+  .colorable-1bkp8v.colorPrimary-3b3xI6: desativado,
+  .colorable-1bkp8v.colorGreen-29iAKY: hover,
+  .colorable-1bkp8v.colorGreen-29iAKY: ativo,
+  .colorable-1bkp8v.colorGreen-29iAKY: desativado,
+  .colorable-1bkp8v.colorGrey-2DXtkV: hover,
+  .colorable-1bkp8v.colorGrey-2DXtkV: ativo,
+  .colorable-1bkp8v.colorGrey-2DXtkV: desativado,
+  .colorable-1bkp8v.colorRed-1TFJan: hover,
+  .colorable-1bkp8v.colorRed-1TFJan: ativo,
+  .colorable-1bkp8v.colorRed-1TFJan: desativado,
+  .colorable-1bkp8v.primaryDark-3mSFDl: hover,
+  .colorable-1bkp8v.primaryDark-3mSFDl: ativo,
+  .colorable-1bkp8v.primaryDark-3mSFDl: desativado,
+  .colorable-1bkp8v.white-3GPOIp: hover,
+  .colorable-1bkp8v.white-3GPOIp: ativo,
+  .colorable-1bkp8v.white-3GPOIp: desativado,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS: hover,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS: ativo,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS: disabled {
+    cor de fundo: var (- cor do botão); }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91: before, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: before, [class * = "theme-"]. lookFilled-1Gx00P.colorGreen-29iAKY: before, [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV: before, [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan: before, [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl: before, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp: before, [class * = "theme-"]. lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS: antes,
+  .colorable-1bkp8v.colorBrand-3pXr91: antes,
+  .colorable-1bkp8v.colorPrimary-3b3xI6: antes,
+  .colorable-1bkp8v.colorGreen-29iAKY: antes,
+  .colorable-1bkp8v.colorGrey-2DXtkV: antes,
+  .colorable-1bkp8v.colorRed-1TFJan: antes,
+  .colorable-1bkp8v.primaryDark-3mSFDl: antes,
+  .colorable-1bkp8v.white-3GPOIp: antes,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS: antes de {
+    posição: absoluta;
+    contente: " ";
+    largura: 100%;
+    altura: 100%;
+    topo: 0;
+    esquerda: 0;
+    cor de fundo: var (- cor de ação do botão);
+    opacidade: 0;
+    eventos de ponteiro: nenhum;
+    transição: var (- tempo de transição) var (- tipo de transição); }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91: hover: before, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: hover: before, [class * = "theme - "] .lookFilled-1Gx00P.colorGreen-29iAKY: hover: before, [class * =" theme- "] .lookFilled-1Gx00P.colorGrey-2DXtkV: hover: before, [class * =" theme- "] .lookFilled- 1Gx00P.colorRed-1TFJan: hover: before, [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl: hover: before, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp: hover: before, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp: hover: before,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS: hover: antes,
+  .colorable-1bkp8v.colorBrand-3pXr91: passar: antes,
+  .colorable-1bkp8v.colorPrimary-3b3xI6: passar: antes,
+  .colorable-1bkp8v.colorGreen-29iAKY: passar o mouse: antes,
+  .colorable-1bkp8v.colorGrey-2DXtkV: hover: antes,
+  .colorable-1bkp8v.colorRed-1TFJan: hover: antes,
+  .colorable-1bkp8v.primaryDark-3mSFDl: hover: antes,
+  .colorable-1bkp8v.white-3GPOIp: passar o mouse: antes,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS: hover: before {
+    opacidade: 0,075; }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91: active: before, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: active: before, [class * = "theme - "] .lookFilled-1Gx00P.colorGreen-29iAKY: ativo: antes, [class * =" theme- "] .lookFilled-1Gx00P.colorGrey-2DXtkV: ativo: antes, [class * =" theme- "] .lookFilled- 1Gx00P.colorRed-1TFJan: active: before, [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl: active: before, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp: ativo: antes, [classe * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp: ativo: antes,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS: ativo: antes,
+  .colorable-1bkp8v.colorBrand-3pXr91: ativo: antes,
+  .colorable-1bkp8v.colorPrimary-3b3xI6: ativo: antes,
+  .colorable-1bkp8v.colorGreen-29iAKY: ativo: antes,
+  .colorable-1bkp8v.colorGrey-2DXtkV: ativo: antes,
+  .colorable-1bkp8v.colorRed-1TFJan: ativo: antes,
+  .colorable-1bkp8v.primaryDark-3mSFDl: ativo: antes,
+  .colorable-1bkp8v.white-3GPOIp: ativo: antes,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS: ativo: antes de {
+    opacidade: 0,15; }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91 .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.colorBrand-3pXr91 .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6 .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6 .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.colorGreen-29iAKY .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.colorGreen-29iAKY .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.colorGrey-2DXtkV .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.colorRed-1TFJan .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.primaryDark-3mSFDl .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp .centerIcon-2G6o-T, [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS .contents-18- Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.white-3GPOIp.active-1QRrIS .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91 .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorBrand-3pXr91 .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6 .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorPrimary-3b3xI6 .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGreen-29iAKY .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorGrey-2DXtkV .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.colorRed-1TFJan .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.primaryDark-3mSFDl .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp .centerIcon-2G6o-T,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS .contents-18-Yxp,
+  [class * = "theme-"] .lookOutlined-3sRXeN.white-3GPOIp.active-1QRrIS .centerIcon-2G6o-T,
+  .colorable-1bkp8v.colorBrand-3pXr91 .contents-18-Yxp,
+  .colorable-1bkp8v.colorBrand-3pXr91 .centerIcon-2G6o-T,
+  .colorable-1bkp8v.colorPrimary-3b3xI6 .contents-18-Yxp,
+  .colorable-1bkp8v.colorPrimary-3b3xI6 .centerIcon-2G6o-T,
+  .colorable-1bkp8v.colorGreen-29iAKY .contents-18-Yxp,
+  .colorable-1bkp8v.colorGreen-29iAKY .centerIcon-2G6o-T,
+  .colorable-1bkp8v.colorGrey-2DXtkV .contents-18-Yxp,
+  .colorable-1bkp8v.colorGrey-2DXtkV .centerIcon-2G6o-T,
+  .colorable-1bkp8v.colorRed-1TFJan .contents-18-Yxp,
+  .colorable-1bkp8v.colorRed-1TFJan .centerIcon-2G6o-T,
+  .colorable-1bkp8v.primaryDark-3mSFDl .contents-18-Yxp,
+  .colorable-1bkp8v.primaryDark-3mSFDl .centerIcon-2G6o-T,
+  .colorable-1bkp8v.white-3GPOIp .contents-18-Yxp,
+  .colorable-1bkp8v.white-3GPOIp .centerIcon-2G6o-T,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS .contents-18-Yxp,
+  .colorable-1bkp8v.white-3GPOIp.active-1QRrIS .centerIcon-2G6o-T {
+    cor: var (- botão-cor do texto); }
+
+[class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6,
+[class * = "theme-"] .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV,
+.lookInverted-2D7oAl.colorBrand-3pXr91,
+[class * = "theme-"] .questionMark-CWEQZn,
+.button-3HqqDX,
+.bd-pfbtn,
+.bd-addon-list .bd-card-footer button {
+  cor de fundo: var (- cor do botão);
+  cor: var (- botão-cor do texto); }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: hover, [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6: ativo,
+  [class * = "theme-"] .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV: hover,
+  [class * = "theme-"] .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV: ativo,
+  .lookInverted-2D7oAl.colorBrand-3pXr91: hover,
+  .lookInverted-2D7oAl.colorBrand-3pXr91: ativo,
+  [class * = "theme-"] .questionMark-CWEQZn: passar o mouse,
+  [class * = "theme-"] .questionMark-CWEQZn: ativo,
+  .button-3HqqDX: pairar,
+  .button-3HqqDX: ativo,
+  .bd-pfbtn: hover,
+  .bd-pfbtn: ativo,
+  .bd-addon-list .bd-card-footer button: passar o mouse,
+  .bd-addon-list .bd-card-footer button: ativo {
+    cor de fundo: var (- cor do botão); }
+  [class * = "theme-"] .lookFilled-1Gx00P.colorPrimary-3b3xI6 .contents-18-Yxp,
+  [class * = "theme-"] .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV .contents-18-Yxp,
+  .lookInverted-2D7oAl.colorBrand-3pXr91 .contents-18-Yxp,
+  [class * = "theme-"] .questionMark-CWEQZn .contents-18-Yxp,
+  .button-3HqqDX .contents-18-Yxp,
+  .bd-pfbtn .contents-18-Yxp,
+  .bd-addon-list .bd-card-footer button .contents-18-Yxp {
+    cor: var (- botão-cor do texto); }
+
+.lookInverted-2D7oAl.colorBrand-3pXr91: antes,
+.button-3HqqDX: antes de {
+  posição: absoluta;
+  contente: " ";
+  largura: 100%;
+  altura: 100%;
+  topo: 0;
+  esquerda: 0;
+  cor de fundo: var (- cor de ação do botão);
+  opacidade: 0,075;
+  eventos de ponteiro: nenhum;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+.lookInverted-2D7oAl.colorBrand-3pXr91: passar o mouse: antes,
+.button-3HqqDX: hover: before {
+  opacidade: 0,075; }
+.lookInverted-2D7oAl.colorBrand-3pXr91: ativo: antes,
+.button-3HqqDX: ativo: antes de {
+  opacidade: 0,15; }
+
+.button-1YfofB.buttonColor-7qQbGO {
+  cor de fundo: var (- cor do botão); }
+  .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp, .button-1YfofB.buttonColor-7qQbGO.fauxDisabled-2ik0Vw {
+    cor de fundo: var (- cor do botão); }
+    .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp: hover, .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp: ativo, .button-1YfofGOB.buttonColor. buttonColor-7qQbGO.fauxDisabled-2ik0Vw: hover, .button-1YfofB.buttonColor-7qQbGO.fauxDisabled-2ik0Vw: ativo, .button-1YfofB.buttonColor-7qQbGO.fauxDisabled-2ik0Vw: active, .button-1YfofB.buttonColor-7qQbGO.fauxDisabled-2ik0Vw:
+      cor de fundo: var (- cor do botão); }
+
+/*.lookFilled-1Gx00P .contents-18-Yxp {
+	índice z: 2;
+} * /
+.lookFilled-1Gx00P.colorBrand-3pXr91: desativado: antes,
+.lookFilled-1Gx00P.colorBrand-3pXr91.fauxDisabled-2ik0Vw: before {
+  Mostrar nenhum; }
+
+/ *
+ *
+ * TOOLTIPS
+ *
+ * /
+[class * = "theme-"] .tooltip-2QfLtc.tooltipPrimary-1d1ph4, [class * = "theme-"] .tooltip-2QfLtc.tooltipBlack-PPG47z, [class * = "theme-"] .tooltip-2QfLtc. tooltipGrey-1hnvTt, [class * = "theme-"] .tooltip-2QfLtc.tooltipRed-8-9NeP, [class * = "theme-"] .tooltip-2QfLtc.tooltipBrand-g03Nz8 {
+  cor de fundo: var (- app-accent);
+  border-radius: var (- app-radius); }
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipPrimary-1d1ph4 .tooltipPointer-3ZfirK, [class * = "theme-"] .tooltip-2QfLtc.tooltipBlack-PPG47z .tooltipPointer-3ZfirK, [class * = "theme - "] .tooltip-2QfLtc.tooltipGrey-1hnvTt .tooltipPointer-3ZfirK, [class * =" theme- "] .tooltip-2QfLtc.tooltipRed-8-9NeP .tooltipPointer-3ZfirK, [class * =" theme- "]. tooltip-2QfLtc.tooltipBrand-g03Nz8 .tooltipPointer-3ZfirK {
+    border-top-color: var (- app-accent); }
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipPrimary-1d1ph4,
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipPrimary-1d1ph4 .guildNameText-3Zwx4p, [class * = "theme-"] .tooltip-2QfLtc.tooltipBlack-PPG47z,
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipBlack-PPG47z .guildNameText-3Zwx4p, [class * = "theme-"] .tooltip-2QfLtc.tooltipGrey-1hnvTt,
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipGrey-1hnvTt .guildNameText-3Zwx4p, [class * = "theme-"] .tooltip-2QfLtc.tooltipRed-8-9NeP,
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipRed-8-9NeP .guildNameText-3Zwx4p, [class * = "theme-"] .tooltip-2QfLtc.tooltipBrand-g03Nz8,
+  [class * = "theme-"] .tooltip-2QfLtc.tooltipBrand-g03Nz8 .guildNameText-3Zwx4p {
+    cor: var (- app-accent-text); }
+
+[class * = "theme-"] .activityIcon-E-aeJm,
+[class * = "theme-"] .tooltipGrey-1hnvTt,
+.title-2IIJok,
+.clickCTA-2B6Kbs {
+  cor: var (- app-accent-text); }
+
+/ *
+ *
+ * TORRADAS
+ *
+ * /
+.bd-toasts {
+  inferior: 96px! importante; }
+
+.torrada,
+.bd-toast {
+  topo: -56px;
+  margem superior: 8px;
+  preenchimento: 10px! importante;
+  raio da borda: 17px;
+  sombra da caixa: var (- sombra da janela);
+  cor: var (- texto normal); }
+  .toast: não (.toast-custom),
+  .bd-toast: not (.toast-custom) {
+    cor de fundo: transparente! importante;
+    imagem de fundo: nenhum! importante; }
+  .toast.toast-custom,
+  .bd-toast.toast-custom {
+    raio da borda: 23px; }
+    .toast.toast-custom: antes,
+    .bd-toast.toast-custom: antes de {
+      display: nenhum! importante; }
+
+.bd-toast: antes de {
+  cor de fundo: rgba (0, 0, 0, 0,5);
+  raio da borda: 17px; }
+
+/ *
+ *
+ * TITLEBARS
+ *
+ * /
+.container-1r6BKw.themed-ANHk51 {
+  cor de fundo: transparente;
+  estouro: oculto; }
+
+.container-1r6BKw.themed-ANHk51: antes de {
+  cor de fundo: transparente; }
+
+.chat-3bRxxu .container-1r6BKw.themed-ANHk51,
+.libraryHeader-3g95kE.container-1r6BKw.themed-ANHk51: before {
+  cor de fundo: transparente; }
+
+.clickable-25tGDB .header-2V-4Sw: passar o mouse,
+.selected-31Nl7x .header-2V-4Sw {
+  cor de fundo: transparente; }
+
+.container-1r6BKw.themed-ANHk51,
+.header-2o-2hj,
+.header-2V-4Sw,
+.searchBar-6Kv8R2 {
+  box-shadow: var (- popout-header-shadow); }
+
+.children-19S4PO: após {
+  Mostrar nenhum; }
+
+/ * TITLEBARS -> SEARCH BARS * /
+.searchBar-3dMhjb,
+.searchBar-6Kv8R2 .searchBarComponent-32dTOx {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 12px; }
+
+.searchBar-3dMhjb {
+  preenchimento: 0 6px; }
+  .searchBar-3dMhjb .searchBarComponent-32dTOx {
+    preenchimento: 0 8px;
+    raio da borda: 14px; }
+
+/ *
+ *
+ * INPUTS, TEXTAREAS, SELECTS
+ *
+ * /
+entrada,
+textarea {
+  cor de fundo: rgba (var (- textarea-color), 0,5)! importante;
+  fronteira: nenhum! importante;
+  color: var (- textarea-text-color)! importante;
+  transição: var (- tempo de transição) var (- tipo de transição)! importante; }
+  entrada: foco,
+  textarea: focus {
+    cor de fundo: rgba (var (- textarea-color), 0,65)! importante; }
+
+input :: - webkit-input-placeholder {
+  color: var (- textarea-text-color)! importante;
+  opacidade: 0,75; }
+
+.input-cIJ7To {
+  cor de fundo: transparente;
+  fronteira: nenhum; }
+
+.inputDefault-_djjkz,
+.input-31cgnL {
+  altura: var (- altura de entrada);
+  border-radius: var (- input-radius); }
+
+.copyInput-1T2hfb,
+.copyInput-2rOSt7 {
+  altura: var (- altura de entrada);
+  cor de fundo: rgba (var (- textarea-color), 0,5)! importante;
+  border-radius: var (- input-radius);
+  fronteira: nenhum;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+  .copyInput-1T2hfb: focus-within,
+  .copyInput-2rOSt7: focus-within {
+    cor de fundo: rgba (var (- textarea-color), 0,65)! importante; }
+  .copyInput-1T2hfb + .copyButton-1I8hd3,
+  .copyInput-2rOSt7 + .copyButton-1I8hd3 {
+    margem esquerda: 12px; }
+  .copyInput-1T2hfb .inputWrapper-2YT_dU,
+  .copyInput-2rOSt7 .inputWrapper-2YT_dU {
+    margem direita: 0; }
+
+.copyInput-1T2hfb .inputDefault-_djjkz,
+.copyInput-2rOSt7 .inputDefault-A2ud2y {
+  cor de fundo: transparente! importante; }
+
+.copyInput-2rOSt7 .lookGhost-2Fn_0-.colorGrey-2DXtkV {
+  altura: var (- altura de entrada);
+  margem: 0 4px 0 0;
+  preenchimento: 0 20px! importante;
+  cor de fundo: transparente; }
+
+/* SELECIONE% S */
+.lookFilled-1h1y05.select-1Pkeg4,
+.css-1a8reka-control,
+.css-2yldzf-control,
+.css-1yegjoj-control,
+.css-17yssst-control,
+.css-gd8if9-control,
+.css-gvi9bl-control,
+.css-6fzn47-control,
+.css-17e1tep-control,
+.css-118dehu-control {
+  min-height: var (- input-height);
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 20px;
+  fronteira: nenhum;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+
+.css-118dehu-control {
+  cor de fundo: rgba (var (- textarea-color), 0.3); }
+
+.css-2yldzf-control {
+  cor de fundo: rgba (var (- textarea-color), 0,65); }
+
+.popout-2sKjHu,
+.css-n57xjs-menu,
+.css-3vaxre-menu {
+  margem superior: 8px;
+  cor de fundo: transparente;
+  border-radius: var (- popout-radius);
+  fronteira: nenhum;
+  sombra da caixa: var (- sombra da janela); }
+
+.optionActive-KkAdqq,
+.optionFocused-8MflSE,
+.css-1gnr91b-option,
+.css-1gnr91b-option: ativo,
+.css-rzbxvl-option,
+.css-rzbxvl-option: active {
+  background-color: var (- background-modifier-hover);
+  cor: var (- texto normal); }
+
+.css-12o7ek3-option,
+.css-1ba14n5-option {
+  cor de fundo: var (- selecionado com modificador de fundo); }
+
+.option-1mJRMP: primeiro filho,
+.css-1gnr91b-option: primeiro filho,
+.css-12o7ek3-option: primeiro filho,
+.css-1ba14n5-option: first-child {
+  border-radius: var (- popout-radius) var (- popout-radius) 0 0; }
+
+.option-1mJRMP: último filho,
+.css-1gnr91b-option: last-childm
+.css-1ba14n5-option: last-child {
+  border-radius: 0 0 var (- popout-radius) var (- popout-radius); }
+
+.option-1mJRMP: filho único {
+  border-radius: var (- popout-radius); }
+
+.css-7s2e5v {
+  opacidade: 0; }
+
+/ *
+ *
+ * SWITCHES, CHECKBOXES, RADIOS
+ *
+ * /
+.barFill-23-gu- {
+  fundo: var (- app-accent); }
+
+.grabber-3mFHz2 {
+  cor de fundo: var (- app-accent-text);
+  fronteira: nenhum; }
+
+/* COMUTA */
+.themeDefault-24hCdX.valueChecked-m-4IJZ {
+  cor de fundo: var (- app-accent)! importante; }
+
+.valueUnchecked-2lU_20: depois,
+.themeDefault-24hCdX.sizeDefault-2YlOZr.valueUnchecked-2lU_20: depois,
+.bd-switch: após {
+  cor de fundo: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (82"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (83"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (84"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (85"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (86"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (87"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (88"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (89"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (90"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (91"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (92"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (93"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (94"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (95"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (96"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (97"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (98"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (99"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (100"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (101"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (102"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (103"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (104"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (105"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (106"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (107"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (108"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (109"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (110"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (111"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (112"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (113"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (114"] .slider-TkfMQL rect {
+  preencher: # 222! importante; }
+
+.size-3rFEHg: depois,
+.size-3rFEHg: ativo: depois,
+.bd-switch-verificado: após {
+  background-color: var (- app-accent-text)! importante;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+
+.container-3auIfb [style * = "background-color: rgb (67"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (67"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (67"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (68"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (68"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (68"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (69"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (69"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (69"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (70"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (70"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (70"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (71"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (71"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (71"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (72"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (72"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (72"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (73"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (73"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (73"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (74"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (74"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (74"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (75"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (75"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (75"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (76"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (76"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (76"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (77"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (77"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (77"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (78"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (78"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (78"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (79"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (79"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (79"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (80"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (80"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (80"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (81"] {
+  cor de fundo: var (- app-accent)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (81"] .slider-TkfMQL rect {
+  preencher: var (- app-accent-text)! importante; }
+
+.container-3auIfb [style * = "background-color: rgb (81"] .slider-TkfMQL path {
+  preencher: var (- app-accent)! importante; }
+
+.cardPrimaryEditable-3KtE4g [style * = "border-color: rgb (114, 137, 218); background-color: rgb (114, 137, 218);"],
+.bd-switch-verificado {
+  cor de fundo: var (- app-accent)! importante;
+  border-color: var (- app-accent)! importante; }
+
+/ * CHECKBOXES * /
+/*.checkbox-1ix_J3 {
+	raio da borda: 50%;
+} * /
+[class * = "theme-"] .checked-3_4uQ9 {
+  cor de fundo: var (- app-accent-text);
+  cor da borda: transparente! importante; }
+
+.iconContainer-1zobSR.checked-1Fij_T {
+  cor da borda: transparente; }
+
+[class * = "theme-"] .checked-3_4uQ9 [style * = "background-color: rgb (114, 137, 218)"],
+.iconContainer-1zobSR.checked-1Fij_T {
+  cor de fundo: var (- app-accent)! importante; }
+
+[class * = "theme-"] .checked-3_4uQ9 [style * = "background-color: rgb (114, 137, 218)"] caminho,
+.iconContainer-1zobSR.checked-1Fij_T path {
+  preencher: var (- app-accent-text)! importante; }
+
+[class * = "theme-"] .checked-3_4uQ9 path {
+  preencher: var (- app-accent)! importante; }
+
+.descChecked-XkfPsU,
+.titleChecked-2wg0pd {
+  cor: var (- app-accent-text)! importante; }
+
+/ * CHECKBOXES -> CORES ESPECIAIS * /
+.item-26Dhrx [style * = "background-color: rgb (67, 181, 129)"] .checked-3_4uQ9 path {
+  preencher: # 43b581! importante; }
+
+.item-26Dhrx [style * = "background-color: rgb (250, 166, 26)"] .checked-3_4uQ9 path {
+  preencher: # faa61a! importante; }
+
+.item-26Dhrx [style * = "background-color: rgb (240, 71, 71)"] .checked-3_4uQ9 path {
+  preencher: # f04747! importante; }
+
+.connection-1fbD7X .size-3rFEHg: após {
+  cor de fundo: #fff; }
+
+/ * RADIOS * /
+.item-26Dhrx {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+  .item-26Dhrx: hover {
+    background-color: var (- card-color-hover); }
+  .item-26Dhrx [aria-checks = true] {
+    cor de fundo: var (- seleção da cor do cartão); }
+  .item-26Dhrx [aria-CHECK = true] caminho,
+  .item-26Dhrx [aria-checks = true] .radioIconForeground-XwlXQN {
+    cor: var (- app-accent); }
+
+/ *
+ *
+ * CARTÕES
+ *
+ * /
+.cardPrimary-1Hv-to,
+.cardPrimaryEditable-3KtE4g,
+.cardPrimaryOutline-29Ujqw,
+.integração-3kMeY4,
+.tutorial-3w5I9h,
+.ctaBar-2UsjF2,
+[class * = "theme-"] .codeRedemptionRedirect-1wVR4b,
+[class * = "theme-"] .perk-2WeBWW,
+[class * = "theme-"] .bd-addon-list .bd-addon-card,
+.footer-1lnhms,
+.connection-1fbD7X,
+.warning-3C2pOH {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão);
+  fronteira: nenhum; }
+
+.warning-3C2pOH {
+  borda: 1px sólido var (- app-accent); }
+  .warning-3C2pOH .icon-1jlFSw {
+    cor: var (- app-accent); }
+
+.connection-1fbD7X {
+  sombra da caixa: nenhum! importante; }
+
+.bd-addon-list .bd-addon-header {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+/ *
+ *
+ * LISTA DE SERVIDORES
+ *
+ * /
+.wrapper-3NnKdC {
+  cor de fundo: var (- cor da barra lateral); }
+
+.scroller-1Bvpku {
+  cor de fundo: transparente; }
+
+.childWrapper-anI2G9,
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9,
+.wrapper-1BJsBx: hover .childWrapper-anI2G9 {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image); }
+
+.childWrapper-anI2G9,
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9,
+.wrapper-1BJsBx: hover .childWrapper-anI2G9 {
+  cor: var (- app-accent-text); }
+
+.mention-1f5kbO {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+.circleIconButton-1QV - U, .circleIconButton-1QV - U: hover, .circleIconButton-1QV - U.selected-1JjBPm {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+.numberBadge-2s8kKX {
+  cor de fundo: var (- app-accent)! importante;
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+.guildsError-b7zR5H {
+  border-color: var (- app-accent); }
+  .guildsError-b7zR5H: hover {
+    cor de fundo: var (- app-accent);
+    background-image: var (- app-accent-image);
+    border-color: var (- app-accent);
+    cor: var (- app-accent-text); }
+
+.verified-1eC5dy,
+.partnered-3nJayh {
+  cor: var (- app-accent-text); }
+
+.icon-1ihkOt {
+  cor: var (- app-accent); }
+
+.header-2o-2hj .verified-1eC5dy,
+.header-2o-2hj .partnered-3nJayh,
+.listRow-hutiT_ .verified-1eC5dy,
+.listRow-hutiT_ .partnered-3nJayh {
+  cor: var (- app-accent); }
+.header-2o-2hj .icon-1ihkOt,
+.listRow-hutiT_ .icon-1ihkOt {
+  cor: var (- app-accent-text); }
+
+.guildInfo-2wGKIg .flowerStar-1GeTsn path {
+  preencher: var (- app-accent); }
+.guildInfo-2wGKIg .icon-1ihkOt {
+  cor: var (- app-accent-text); }
+
+.flowerStar-1GeTsn {
+  AVC: nenhum; }
+
+.iconBadge-2NuvG9.participating-1NvRVd {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image); }
+  .iconBadge-2NuvG9.participating-1NvRVd path {
+    preencher: var (- app-accent-text); }
+
+.item-2hkk8m {
+  cor de fundo: var (- cor de notificação); }
+
+/ * LISTA DE SERVIDORES -> PASTAS * /
+.expandedFolderBackground-2sPsd- {
+  cor de fundo: rgba (255, 255, 255, 0,1);
+  border-radius: 16px 16px 24px 24px; }
+
+.folder-21wGz3 {
+  cor de fundo: transparente; }
+  .folder-21wGz3.hover-2ji_A7 {
+    cor de fundo: rgba (255, 255, 255, 0,1); }
+
+.expandedFolderBackground-2sPsd- + .listItem-GuPuDH .svg-1X37T1 {
+  filtro: nenhum; }
+
+/ * SERVER LIST -> CREATE / JOIN SERVER * /
+.header-3ZP1MY {
+  color: #eee; }
+
+.action-1lSjCi .colorStandard-2KCXvj,
+.description-QF3836,
+.description-Bw8krY,
+.inputLabel-vJ2Z0B,
+.label-wQQoIq,
+.helpText-h3r3wC,
+.avatarUploader-3XDtmn .sizeInfo-SKMPPw,
+.connectCTA-37DS2Y,
+.nameInput-2LpnKg .h5-18_1nd,
+.guidelines-1NSoht,
+.creationIntentText-3OlELP {
+  cor: #ccc; }
+
+[classe * = "tema-"] .action-1lSjCi {
+  cor de fundo: var (- cor do cartão);
+  fronteira: nenhum; }
+
+.input-1mgnkM,
+.input-UJ9Tr3 {
+  padding-left: 12px;
+  padding-right: 12px;
+  raio da borda: 20px; }
+
+/ * SERVER LIST -> CREATE / JOIN SERVER -> CREATE * /
+.avatarUploaderInner-3UNxY3 {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  fronteira: nenhum;
+  sombra da caixa: var (- sombra da janela); }
+  .avatarUploaderInner-3UNxY3> * {
+    cor: var (- app-accent-text); }
+
+/ * LISTA DE SERVIDORES -> CRIAR / PARTICIPAR DO SERVIDOR -> CRIAR -> REGIÃO DO SERVIDOR * /
+.regionSelectModal-12e-57 {
+  cor de fundo: transparente! importante; }
+  .regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3 {
+    cor de fundo: var (- cor do cartão);
+    raio da borda: var (- raio do cartão);
+    cor da borda: transparente;
+    transição: var (- tempo de transição) var (- tipo de transição); }
+    .regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3: hover {
+      background-color: var (- card-color-hover);
+      border-color: var (- app-accent); }
+
+/ *
+ *
+ * LISTA DE CANAIS
+ *
+ * /
+.platform-win .sidebar-2K8pFh {
+  raio da borda: 0; }
+
+.sidebar-2K8pFh {
+  cor de fundo: var (- cor da barra lateral); }
+
+.container-3w7J-x,
+.container-PNkimc {
+  cor de fundo: transparente; }
+
+.animatedContainer-1pJv5C {
+  box-shadow: var (- popout-header-shadow); }
+
+.content-1x5b-n {
+  raio da borda: var (- raio do cartão); }
+
+.container-2ax-kl,
+.name-3_Dsmg {
+  cor: var (- canais-padrão); }
+
+.containerDragAfter-1F4fgZ: depois,
+.containerDragBefore-31UGCO: antes de {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image); }
+
+.unread-3zKkbm {
+  largura: 6px;
+  altura: 6px;
+  cor de fundo: var (- cor de notificação);
+  raio da borda: 3px; }
+
+/ * LISTA DE CANAIS -> PERMISSÕES * /
+.settingCard-3w2mVL, .settingCard-3w2mVL.active-1ytUzX {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+  .settingCard-3w2mVL .cardContent-qqqwo8, .settingCard-3w2mVL.active-1ytUzX .cardContent-qqqwo8 {
+    raio da borda: var (- raio do cartão) var (- raio do cartão) 0 0;
+    box-shadow: var (- popout-header-shadow); }
+
+.cardFolder-28dwxo {
+  cor de fundo: transparente; }
+
+/ *
+ *
+ * STATUS PICKER
+ *
+ * /
+.panels-j1Uci_ {
+  cor de fundo: transparente; }
+
+/ *
+ *
+ * VOZ CONECTADA
+ *
+ * /
+.content-1Wq3SX {
+  raio da borda: var (- raio do botão); }
+
+[class * = "theme-"] .container-2x5lvQ .header-2C89wJ,
+[class * = "theme-"] .container-2x5lvQ seção {
+  cor de fundo: transparente; }
+
+.container-2x5lvQ .header-2C89wJ {
+  box-shadow: var (- popout-header-shadow); }
+
+/*.wrapper-2qzCYF {
+	cor de fundo: var (- cor do conteúdo principal);
+} * /
+.avatarSpeaking-2IGMRN,
+.border-3dQmSY.speaking-WDn8Wm,
+.border-Jn5IOt.speaking-B2MXPi {
+  sombra da caixa: inserção 0 0 0 2px var (- app-accent), inserção 0 0 3px 3px rgba (0, 0, 0, 0,35); }
+
+.tile-2naSqK {
+  cor de fundo: var (- cor do cartão); }
+
+.button-3HqqDX: antes de {
+  raio da borda: 100px; }
+
+/ * VOICE CONNECTED -> STREAMING PREVIEW * /
+[class * = "theme-"] .streamPreview-2-WUWT,
+[class * = "theme-"] .previewContainer-12UlHl {
+  cor de fundo: transparente; }
+
+.liveSmall-1dy2uA {
+  cor de fundo: var (- app-accent)! importante;
+  cor: var (- app-accent-text); }
+
+/ * VOICE CONNECTED -> ACTIVITY HOVER * /
+.container-2dqNWc {
+  padding-right: 16px! importante; }
+  .container-2dqNWc: antes de {
+    posição: fixa;
+    largura: calc (100% - 16px);
+    altura: 100%;
+    margem esquerda: 16px; }
+
+/ *
+ *
+ * TRANSMISSÃO
+ *
+ * /
+.scroller-2TWLdF {
+  cor de fundo: transparente; }
+
+[class * = "theme-"] .memberListItem-2ZX2pl: not (.popoutDisabled-xucru2): hover {
+  background-color: var (- background-modifier-hover); }
+
+.participantsButton-KYW-IW {
+  posição: absoluta; }
+  .participantsButton-KYW-IW, .participantsButton-KYW-IW: hover {
+    cor de fundo: transparente; }
+
+/ *
+ *
+ * ÁREA DE CHAT
+ *
+ * /
+.chat-3bRxxu,
+.noChannel-Z1DQK7 {
+  cor de fundo: var (- cor do conteúdo principal); }
+
+.messages-3amgkR,
+.wrapper-3vR61M,
+.wrapper-1F5TKx {
+  cor de fundo: transparente; }
+
+.button-18p_f6 {
+  cor: var (- app-accent); }
+
+.attachment-2p5mHK,
+.avatar-2daVqv,
+.blob-2w7iIK {
+  cor de fundo: # 000; }
+
+.content-yTz4x3: antes de {
+  Mostrar nenhum; }
+
+.newMessagesBar-265mhP,
+.jumpToPresentBar-G1R9s6 {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image); }
+
+.newMessagesBar-265mhP {
+  border-radius: 0 0 var (- messages-radius) var (- messages-radius); }
+
+.jumpToPresentBar-G1R9s6 {
+  acolchoamento inferior: 0;
+  border-radius: var (- mensagens-radius); }
+
+.barButtonBase-2uLO1z {
+  cor: var (- app-accent-text); }
+
+/ * ÁREA DE CHAT -> MENSAGENS * /
+.message-2qnXI6: não (.groupStart-23k01U),
+.message-2qnXI6.compact-T3H92H {
+  margem superior: 2px; }
+
+.wrapper-2a6GCs {
+  cor de fundo: var (- cor da mensagem);
+  border-radius: var (- mensagens-radius); }
+  .wrapper-2a6GCs.cozy-3raOZG, .wrapper-2a6GCs.compact-T3H92H {
+    margem esquerda: 76px;
+    margem direita: 24px;
+    preenchimento: var (- preenchimento de mensagens);
+    padding-right: 8px! important;
+    borda: 2px sólido transparente; }
+    .wrapper-2a6GCs.cozy-3raOZG .timestamp-3ZCmNB, .wrapper-2a6GCs.cozy-3raOZG .timestamp-3ZCmNB.alt-1uNpEt, .wrapper-2a6GCs.compact-3H92H. T3H92H .timestamp-3ZCmNB.alt-1uNpEt {
+      cor: var (- texto normal); }
+  .wrapper-2a6GCs.cozy-3raOZG .timestamp-3ZCmNB.alt-1uNpEt {
+    esquerda: -70px; }
+  .wrapper-2a6GCs.compact-T3H92H {
+    preenchimento: 4px;
+    padding-left: 6px; }
+    .wrapper-2a6GCs.compact-T3H92H .timestamp-3ZCmNB {
+      margem direita: 0,75 rem; }
+
+.backgroundFlash-24qWLN {
+  cor de fundo: transparente! importante; }
+
+.mouse-mode.full-motion .backgroundFlash-24qWLN [style * = "background-color: rgba (114, 137, 218, 0.2)"] .mentioned-xhSam7: pairar,
+.mouse-mode.full-motion .backgroundFlash-24qWLN [style * = "background-color: rgba (114, 137, 218, 0.2)"] .message-2qnXI6.mentioned-xhSam7: hover {
+  cor de fundo: var (- cor da mensagem);
+  cor da borda: var (- cor da menção);
+  sombra da caixa: inserção 0px 0px 10px 3px var (- cor-menção), 0px 0px 13px 4px var (- cor-menção); }
+
+[c lass * = "theme-"] .message-2qRu38 {
+  cor de fundo: transparente;
+  sombra da caixa: nenhum; }
+
+.header-1TKi98 + .content-1LAB8Z .cozyMessage-3V1Y8y.groupStart-23k01U {
+  margem superior: 16px; }
+
+.message-2qRu38 .cozy-3raOZG.wrapper-2a6GCs {
+  margem esquerda: 52px;
+  margem direita: 0; }
+
+.group-spacing-0 .wrapper-2a6GCs + .wrapper-2a6GCs: not (.message-2qnXI6) {
+  - espaçamento da margem: 0,0625rem; }
+
+.group-spacing-4 .wrapper-2a6GCs + .wrapper-2a6GCs: not (.message-2qnXI6) {
+  - espaçamento da margem: 0,3125rem; }
+
+.group-spacing-8 .wrapper-2a6GCs + .wrapper-2a6GCs: not (.message-2qnXI6) {
+  - espaçamento da margem: 0,5625rem; }
+
+.group-spacing-16 .wrapper-2a6GCs + .wrapper-2a6GCs: not (.message-2qnXI6) {
+  - espaçamento de margem: 1,0625rem; }
+
+.group-spacing-24 .wrapper-2a6GCs + .wrapper-2a6GCs: not (.message-2qnXI6) {
+  --espacialidade: 1,5625rem; }
+
+.wrapper-2a6GCs.message-2qnXI6 + .wrapper-2a6GCs: not (.message-2qnXI6) {
+  margin-top: var (- espaçamento da margem); }
+
+.avatar-1BDn8e {
+  topo: 0;
+  esquerda: -52px; }
+
+.message-2qnXI6.selected-2P5D_Z,
+.mouse-mode.full-motion .message-2qnXI6: hover {
+  cor de fundo: var (- cor da mensagem); }
+
+.mencionado-xhSam7,
+.message-2qnXI6.mentioned-xhSam7.selected-2P5D_Z,
+.mouse-mode.full-motion .mentioned-xhSam7: passar o mouse,
+.mouse-mode.full-motion .message-2qnXI6.mentioned-xhSam7: hover {
+  cor de fundo: var (- cor da mensagem);
+  cor da borda: var (- cor da menção)! importante;
+  sombra da caixa: inserção 0px 0px 6px 1px var (- cor-da-menção), 0px 0px 9px 2px var (- cor-menção); }
+
+.localBot-GrCgVt: antes,
+.mencionado-xhSam7: antes de {
+  Mostrar nenhum; }
+
+.wrapper-3WhCwL {
+  antecedentes: rgba (var (- menção-rgb), 0,175);
+  cor: var (- menção à cor); }
+
+.interativo {
+  transição: var (- tempo de transição) var (- tipo de transição); }
+
+.interactive: hover {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+[class * = "theme-"] .mentioned-xhSam7 .mention.interactive: hover {
+  cor: var (- app-accent); }
+
+.isUnread-3Ef-o9 {
+  border-color: var (- app-accent); }
+
+.unreadPill-2HyYtt {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+.unreadPillCap-3_K2q2 {
+  filtro: nenhum! importante; }
+
+.unreadPillCapStroke-7rkHbg {
+  cor: var (- app-accent);
+  preencher: var (- app-accent); }
+
+.content-1o0f9g {
+  posição: relativa;
+  preenchimento: 2px 6px;
+  cor de fundo: transparente;
+  cor: var (- texto normal); }
+  .content-1o0f9g: antes de {
+    posição: absoluta;
+    contente: " ";
+    largura: 100%;
+    altura: 100%;
+    topo: 0;
+    esquerda: 0;
+    cor de fundo: var (- cor de popout);
+    raio da borda: 9px;
+    filtro de fundo: desfoque (- desfoque popout);
+    eventos de ponteiro: nenhum;
+    índice z: -1; }
+
+.hasMore-3e72_v {
+  margem: 28px 24px 16px 24px;
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão);
+  sombra da caixa: nenhum;
+  cor: var (- texto normal);
+  tamanho da fonte: 14px;
+  transformação de texto: minúsculas;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+  .hasMore-3e72_v: primeira letra {
+    transformação de texto: capitalize; }
+  .hasMore-3e72_v: hover {
+    background-color: var (- card-color-hover); }
+
+/ * ÁREA DE CHAT -> MENSAGENS -> FONTE EM ESCALA * /
+.a11y-font-scaled-down [style * = "font-size: 75%"] {
+  --text-indent: 62px; }
+.a11y-font-scaled-down [style * = "font-size: 87,5%"] {
+  --text-indent: 70px; }
+.a11y-font-scaled-down [style * = "font-size: 93,75%"] {
+  --text-indent: 74px; }
+.a11y-font-scaled-down [style * = "font-size: 112,5%"] {
+  --text-indent: 89px; }
+.a11y-font-scaled-down [style * = "font-size: 125%"] {
+  --text-indent: 99px; }
+.a11y-font-scaled-down [style * = "font-size: 150%"] {
+  --text-indent: 115px; }
+.a11y-font-scaled-down .cozy-3raOZG.wrapper-2a6GCs,
+.a11y-font-scaled-down .compact-T3H92H.wrapper-2a6GCs {
+  margem esquerda: var (- recuo do texto);
+  margem direita: 24px;
+  preenchimento: 8px;
+  padding-right: 8px; }
+.a11y-font-scaled-down .avatar-1BDn8e {
+  esquerda: -52px; }
+
+/ * ÁREA DE CHAT -> MENSAGENS -> AÇÕES * /
+.button-1ZiXG9: primeiro filho {
+  border-radius: var (- popout-radius) 0 0 var (- popout-radius); }
+.button-1ZiXG9: último filho {
+  border-radius: 0 var (- popout-radius) var (- popout-radius) 0; }
+.button-1ZiXG9: filho único {
+  border-radius: var (- popout-radius); }
+
+/ * ÁREA DE CHAT -> MENSAGENS -> INCORPORADAS * /
+.embedFull-2tM8--,
+[class * = "theme-"] .invite-18yqGF,
+[class * = "theme-"] .wrapperAudio-1jDe0Q,
+.wrapper-35wsBm,
+.attachment-33OFj0,
+[class * = "theme-"] .tile-2OwFgW,
+[class * = "theme-"] .tile-2OwFgW: hover {
+  cor de fundo: var (- cor da mensagem);
+  border-radius: var (- mensagens-radius); }
+
+.invite-18yqGF,
+.wrapperAudio-1jDe0Q,
+.attachment-33OFj0 {
+  fronteira: nenhum; }
+
+.markup-2BOw-ja {
+  cor: var (- app-accent); }
+.markup-2BOw-j pre {
+  border-radius: var (- mensagens-radius); }
+.markup-2BOw-j code {
+  cor de fundo: var (- cor da mensagem);
+  border-radius: var (- mensagens-radius);
+  fronteira: nenhum; }
+
+/ * ÁREA DE CHAT -> MENSAGENS -> EDITAR MENSAGEM * /
+.channelTextArea-3bF57p {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  border-radius: var (- textarea-radius); }
+
+/ * ÁREA DE CHAT -> MENSAGENS -> REAÇÕES * /
+.size-2kUz0R {
+  altura máxima: 350px; }
+
+[class * = "theme-"] .scroller-1-nKid {
+  cor de fundo: var (- cor da barra lateral); }
+
+[class * = "theme-"] .container-1Se-HZ,
+[class * = "theme-"] .reactors-Blmlhw {
+  cor de fundo: transparente; }
+
+.reaction-1hd86g {
+  border-radius: var (- mensagens-radius); }
+  .reaction-1hd86g.reactionMe-wv5HKu {
+    cor de fundo: rgba (var (- app-accent-rgb), 0,3); }
+
+.reactionMe-wv5HKu .reactionCount-2mvXRV, .reactionMe-wv5HKu: hover .reactionCount-2mvXRV {
+  cor: var (- app-accent); }
+
+/ * ÁREA DE CHAT -> MENSAGENS -> INFORMAÇÕES EMOJI * /
+.emojiSection-3Fb9ix {
+  cor de fundo: rgba (0, 0, 0, var (- popout-header-opacity));
+  box-shadow: var (- popout-header-shadow); }
+  .emojiSection-3Fb9ix: only-child {
+    cor de fundo: transparente;
+    sombra da caixa: nenhum; }
+
+.guildSection-1EoFKd {
+  cor de fundo: transparente; }
+
+/ * ÁREA DE CHAT -> TEXTAREA * /
+.form-2fGMdU {
+  margem superior: 0; }
+  .form-2fGMdU: antes de {
+    Mostrar nenhum; }
+
+.channelTextArea-rNsIhG,
+.wrapper-39oAo3 {
+  altura mínima: 44px;
+  margem: 12px 0 12px 0;
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  border-radius: var (- textarea-radius); }
+
+.container-9gOVw0 {
+  cor de fundo: transparente;
+  border-radius: var (- textarea-radius) var (- textarea-radius) 0 0;
+  borda inferior: 1px solid rgba (255, 255, 255, 0,15); }
+
+.wrapper-39oAo3 {
+  preenchimento: 0; }
+
+.buttonContainer-3AU1Ij {
+  margem direita: 16px; }
+
+.scrollableContainer-2NUZem {
+  cor de fundo: transparente; }
+  .scrollableContainer-2NUZem + .autocomplete-1vrmpx {
+    posição: absoluta;
+    border-radius: var (- popout-radius)! important; }
+
+.typing-2GQL18 {
+  topo: -12px;
+  overflow-x: oculto; }
+  .typing-2GQL18: antes de {
+    posição: absoluta;
+    contente: " ";
+    largura: calc (100% + var (- app-blur) * 5);
+    altura: calc (100% + var (- borrão-app) * 5);
+    topo: calc (var (- app-blur) / -1 * 2,5);
+    esquerda: calc (var (- app-blur) / -1 * 2,5);
+    imagem de fundo: var (- app-bg);
+    posição de fundo: centro;
+    tamanho do fundo: capa;
+    anexo de fundo: fixo;
+    repetição de fundo: sem repetição;
+    sombra da caixa: inserção 0 0 0 100vmax var (- main-content-color);
+    filtro: blur (var (- app-blur));
+    eventos de ponteiro: nenhum; }
+  .typing-2GQL18 * {
+    índice z: 2; }
+
+.fakeLink-26oLcc {
+  cor: var (- app-accent); }
+
+/ * ÁREA DE CHAT -> TEXTAREA -> MENÇÃO AUTOCOMPLETADA * /
+[class * = "theme-"] .autocomplete-3l_oCd,
+[class * = "theme-"] .autocomplete-1vrmpx {
+  cor de fundo: transparente;
+  border-radius: var (- popout-radius);
+  sombra da caixa: var (- sombra da janela); }
+
+[class * = "theme-"] .selectorSelected-1_M1WV {
+  background-color: var (- background-modifier-hover); }
+
+.wrapper-uf3cnO {
+  cor de fundo: transparente; }
+
+[class * = "theme-"] .selected-1Tbx07 {
+  background-color: var (- background-modifier-hover); }
+
+.bar-AokMp3 {
+  cor de fundo: transparente; }
+
+/ * ÁREA DE CHAT -> TEXTAREA -> FORMATAR BARRA DE FERRAMENTAS * /
+.toolbar-2bjZV7 {
+  cor de fundo: transparente;
+  raio da borda: 16px;
+  box-shadow: var (- popout-shadow)! important;
+  estouro: oculto; }
+  .toolbar-2bjZV7: após {
+    raio da borda: 16px; }
+
+[classe * = "tema-"] .container-Qj4uIL {
+  cor de fundo: var (- cor de popout);
+  border-radius: var (- popout-radius);
+  sombra da caixa: var (- sombra da janela); }
+
+.containerBackground-3PNziK {
+  cor de fundo: transparente;
+  fronteira: nenhum; }
+  .containerBackground-3PNziK: após {
+    border-top-color: var (- popout-color); }
+
+.maskBackground-1WpXoP {
+  background-color: var (- background-modifier-hover); }
+
+/ * ÁREA DE CHAT -> TEXTAREA -> RESPOSTAS INLINE * /
+.container-2fRDfG {
+  cor de fundo: transparente;
+  border-radius: var (- textarea-radius) var (- textarea-radius) 0 0;
+  border-bottom: 1px solid var (- background-modifier-accent); }
+
+.repliedMessage-VokQwo: antes de {
+  transform: translateX (42px); }
+
+.replyAvatar-1K9Wmr,
+.repliedMessage-VokQwo> .replyBadge-r1su3o {
+  margem esquerda: 42px; }
+
+.compact-T3H92H .repliedMessage-VokQwo> .replyBadge-r1su3o {
+  margem esquerda: 0; }
+
+.ephemeral-1PsL1r,
+.respondo-1x3H0T,
+.backgroundFlash-24qWLN [style * = "background-color: rgba (114, 137, 218, 0.2)"] .wrapper-2a6GCs {
+  cor da borda: var (- menção-alt)! importante;
+  box-shadow: inserção 0px 0px 6px 1px var (- menção-alt), 0px 0px 9px 2px var (- menção-alt); }
+  .ephemeral-1PsL1r: antes,
+  .respondo-1x3H0T: antes,
+  .backgroundFlash-24qWLN [style * = "background-color: rgba (114, 137, 218, 0.2)"] .wrapper-2a6GCs: before {
+    Mostrar nenhum; }
+
+.ephemeralMessage-1fEWtQ a {
+  cor: var (- menção-alt); }
+
+/ * ÁREA DE CHAT -> TEXTAREA -> RESPOSTAS INLINE -> COMPACTA * /
+.repliedMessage-VokQwo: antes de {
+  border-color: var (- text-normal);
+  opacidade: 0,5; }
+
+.compact-T3H92H .repliedMessage-VokQwo {
+  margem esquerda: calc (var (- timestamp-width) + 3.1rem + var (- text-indent)); }
+  .compact-T3H92H .repliedMessage-VokQwo: antes {
+    transformar: nenhum; }
+
+/ *
+ *
+ * EMOJI PICKER
+ *
+ * /
+.contentWrapper-SvZHNd,
+.emojiPicker-3PwZFl {
+  cor de fundo: transparente; }
+
+.contentWrapper-SvZHNd .wrapper-1rqM3x: before {
+  Mostrar nenhum; }
+
+.categoryList-2Kzf65 .scroller-3gAZLs :: - webkit-scrollbar {
+  largura: 0! importante; }
+
+.header-8ilj5e,
+[class * = "theme-"] .header-1TOWci,
+.header-2k4I2o {
+  box-shadow: var (- popout-header-shadow); }
+
+.header-2k4I2o {
+  posição: absoluta;
+  largura: 100%;
+  altura mínima: 46px;
+  eventos de ponteiro: nenhum; }
+
+.navButton-2gQCx-: hover {
+  background-color: var (- background-modifier-hover); }
+.navButton-2gQCx-.navButtonActive-1MkytQ {
+  cor de fundo: var (- selecionado com modificador de fundo); }
+
+.container-2XeR5Z,
+.container-cMG81i {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 17px; }
+  entrada .container-2XeR5Z,
+  .container-cMG81i input {
+    cor de fundo: transparente! importante; }
+
+.searchBar-1FaHXw {
+  fronteira: nenhum; }
+
+.wrapper-2Gsate {
+  cor de fundo: var (- cor da barra lateral); }
+
+.wrapper-1-Fsb8 {
+  posição: relativa;
+  estouro: oculto; }
+
+[class * = "theme-"] .wrapper-1-Fsb8 {
+  cor de fundo: transparente; }
+
+.emojiItem-14v6tW.emojiItemSelected-1aLkfV {
+  background-color: var (- background-modifier-hover); }
+
+.inspector-S2gM3e,
+.unicodeShortcut-15J8Ck,
+.stickerCategoryShopWrapper-3EnJdQ {
+  cor de fundo: transparente; }
+
+.unicodeShortcut-15J8Ck: antes de {
+  posição: absoluta;
+  contente: " ";
+  largura: 100%;
+  altura: 100%;
+  topo: 0;
+  esquerda: 0;
+  cor de fundo: var (- cor da barra lateral);
+  filtro de fundo: blur (var (- popout-blur));
+  opacidade: 1;
+  eventos de ponteiro: nenhum; }
+
+/ * EMOJI PICKER -> ETIQUETAS * /
+.skuPreviewModalContent-3IkwuK {
+  acolchoamento superior: 0; }
+
+.stickerInspected-2EM4w- .stickerBackground-2XECKi,
+.viewAll-2RLt-n: hover .viewAllBackground-3Bn1vh,
+.viewAllInspected-FsmJHj .viewAllBackground-3Bn1vh {
+  background-color: var (- background-modifier-hover); }
+
+.listWrapper-hig339 {
+  margem superior: 46px; }
+
+/ *
+ *
+ * LISTA DE MEMBROS
+ *
+ * /
+.members-1998pB,
+.members-1998pB> div {
+  cor de fundo: transparente; }
+
+.botTagRegular-2HEhHi,
+.botTagInvert-18-95s {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+.layout-2DM8Md {
+  raio da borda: var (- raio do botão); }
+
+/ *
+ *
+ * PROCURAR RESULTADOS
+ *
+ * /
+.searchResultsWrap-3-pOjs {
+  cor de fundo: var (- cor da barra lateral); }
+
+/ * RESULTADOS DA PESQUISA -> CABEÇALHO * /
+.searchHeader-2XoQg7 {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+.channelName-1JRO3C {
+  cor de fundo: transparente; }
+
+/ * SEARCH RESULTS -> HEADER -> TABS * /
+[classe * = "tema-"] .tab-2j5AEF {
+  raio da borda: var (- raio do cartão); }
+  [class * = "theme-"] .tab-2j5AEF.selected-2LAck8 {
+    cor de fundo: var (- selecionado com modificador de fundo); }
+
+/ * RESULTADOS DA PESQUISA -> MENSAGENS * /
+.searchResult-9tQ1uo: antes, .searchResult-9tQ1uo: depois {
+  Mostrar nenhum; }
+.searchResult-9tQ1uo .cozy-3raOZG.wrapper-2a6GCs,
+.searchResult-9tQ1uo .compact-T3H92H.wrapper-2a6GCs {
+  margem esquerda: 50px;
+  margem direita: 0; }
+
+.searchResultMessage-1fxgXh.hit-1fVM9e {
+  cor de fundo: transparente;
+  fronteira: nenhum;
+  sombra da caixa: nenhum;
+  estouro: visível; }
+.searchResultMessage-1fxgXh.before-2RL1Gz, .searchResultMessage-1fxgXh.after-20SH8W {
+  margem superior: 0;
+  fronteira: nenhum; }
+.searchResultMessage-1fxgXh.sibling-1eJVjd {
+  opacidade: 0,35; }
+
+/ * RESULTADOS DA PESQUISA -> MENSAGENS -> EXPANDIDAS * /
+.searchResult-9tQ1uo.expanded-w_LCGl,
+.expanded-w_LCGl .searchResultMessage-1fxgXh.hit-1fVM9e {
+  cor de fundo: transparente;
+  fronteira: nenhum; }
+
+.searchResultMessage-1fxgXh {
+  margin-bottom: 8px! important; }
+
+.expanded-w_LCGl .searchResultMessage-1fxgXh.hit-1fVM9e {
+  margem esquerda: 0;
+  margem direita: 0; }
+
+/ *
+ *
+ * AUMENTO DE SERVIDOR
+ *
+ * /
+.root-3R2ngo {
+  margem: calc (var (- margem do aplicativo) / 2 + 24px) var (- margem do aplicativo) var (- margem do aplicativo) var (- margem do aplicativo); }
+
+[class * = "theme-"] .perksModal-fSYqOq {
+  imagem de fundo: nenhuma;
+  cor de fundo: var (- cor do conteúdo principal); }
+
+.tier-12tKuZ {
+  raio da borda: var (- raio do cartão); }
+
+[class * = "theme-"] .tierHeaderLocked-1s2JJz,
+[class * = "theme-"] .tierHeaderUnlocked-1n-OTI,
+[class * = "theme-"] .tierBody-16Chc9,
+[class * = "theme-"] .tierHeaderUnlocked-1n-OTI {
+  cor de fundo: var (- cor do cartão);
+  imagem de fundo: nenhuma; }
+
+.tierHeader --- JJFb {
+  raio da borda: var (- raio do cartão) var (- raio do cartão) 0 0;
+  box-shadow: var (- popout-header-shadow); }
+
+[class * = "theme-"] .tierUnlocked-25K6Kv {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  cor: var (- app-accent-text); }
+
+.tierBody-16Chc9 {
+  border-radius: 0 0 var (- card-radius) var (- card-radius); }
+
+.subscription-3aLGnG {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+/ *
+ *
+ * CONFIGURAÇÕES DO USUÁRIO
+ *
+ * /
+.layer-3QrUeG,
+.standardSidebarView-3F1I7i {
+  cor de fundo: transparente; }
+
+.sidebarRegionScroller-3MXcoP {
+  cor de fundo: var (- cor da barra lateral); }
+
+.contentRegion-3nDuYy {
+  cor de fundo: var (- cor do conteúdo principal); }
+
+.contentRegionScroller-26nc1e {
+  cor de fundo: transparente; }
+
+.side-8zPYf6 .item-PXvHYJ,
+# bd-settings-sidebar .ui-tab-bar-item {
+  raio da borda: var (- raio do botão); }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> MINHA CONTA * /
+.background-1QDuV2 {
+  cor de fundo: var (- cor do cartão); }
+
+[class * = "theme-"] .userSettingsAccount-2eMFVR .viewBody-2Qz-jg {
+  cor: var (- texto normal); }
+
+.avatarUploaderInner-3UNxY3 .avatarUploaderHint-3SN212 {
+  cor: var (- texto normal); }
+
+.userInfoEditing-1CEzdT .multiInput-1e2xJ7 .multiInputLast-1aQ3YA,
+.multiInputFirst-2aPTwX + .multiInputLast-33BbRU {
+  margem: 0 8px; }
+
+.userInfoEditing-1CEzdT .multiInputLast-1aQ3YA: antes,
+.multiInputLast-33BbRU: antes de {
+  Mostrar nenhum; }
+
+.questionMark-CWEQZn,
+.questionMark-3qBhGj {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  raio da borda: 50%; }
+  .questionMark-CWEQZn .icon-3zLVMD,
+  .questionMark-3qBhGj .icon-3zLVMD {
+    cor: var (- app-accent-text); }
+
+.phoneField-38N1bJ {
+  preenchimento: 2px 8px;
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 22px;
+  fronteira: nenhum; }
+  .phoneField-38N1bJ .countryButton-3xq3Ts {
+    raio da borda: var (- raio do botão); }
+  .phoneField-38N1bJ .plusSign-15Cgdh,
+  .phoneField-38N1bJ .countryCode-2TeNMX {
+    cor: var (- app-accent-text); }
+  .phoneField-38N1bJ .phoneFieldExpand-2DzY5G {
+    traço: var (- app-accent-text); }
+  .phoneField-38N1bJ input {
+    cor de fundo: transparente! importante; }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> APLICATIVOS AUTORIZADOS * /
+.authedApp-mj2Hmd {
+  margin-bottom: 16px;
+  preenchimento: 0; }
+  .authedApp-mj2Hmd .marginBottom20-32qID7 {
+    preenchimento: 16px;
+    raio da borda: var (- raio do cartão) var (- raio do cartão) 0 0;
+    box-shadow: var (- popout-header-shadow); }
+    .authedApp-mj2Hmd .marginBottom20-32qID7 + div: not ([classe]) {
+      preenchimento: 0 16px; }
+  .authedApp-mj2Hmd .marginTop20-3TxNs6 {
+    preenchimento: 0 16px 16px; }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> CONEXÕES * /
+.accountList-33MS45 {
+  preenchimento: 16px 16px 8px;
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.accountBtn-2Nozo3 .accountBtnInner-sj5jLs {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão);
+  transição: var (- tempo de transição) var (- tipo de transição); }
+  .accountBtn-2Nozo3 .accountBtnInner-sj5jLs: hover {
+    background-color: var (- card-color-hover); }
+
+.connectionList-3pzR-1 {
+  intervalo de grade: 16px; }
+
+.connection-1fbD7X {
+  margem inferior: 0; }
+
+.connectionHeader-2MDqhu {
+  preenchimento: 16px;
+  cor de fundo: transparente;
+  borda inferior: nenhum;
+  box-shadow: var (- popout-header-shadow); }
+
+.connectionDelete-2Odoln span {
+  tamanho da fonte: 0; }
+
+.connectionOptionsWrapper-3KIj1Z {
+  preenchimento: 16px 8px 0; }
+
+.connectionOptionSwitch-3KNn-E {
+  margin-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px; }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> FATURAMENTO * /
+.paymentSourceRow-3FbcL_ {
+  margem: 0 0 16px 0;
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.paymentSourceRow-3FbcL_,
+.card-VoqMMK {
+  preenchimento: 16px; }
+
+.defaultMarginh2-2LTaUL + div + .divider-3573oO {
+  Mostrar nenhum; }
+
+.codeRedemptionRedirect-1wVR4b {
+  margem superior: 20px;
+  preenchimento: 16px; }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> DISCORD NITRO * /
+.gridItem-HzCfl4: antes de {
+  opacidade: 0,4; }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> ASSINATURAS * /
+.banner-3Kac2g {
+  raio da borda: var (- raio do cartão); }
+
+.detailsBlock-FoDTGA {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.lookFilled-22uAsw.select-2fjwPw {
+  min-height: var (- input-height);
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 23px;
+  fronteira: nenhum;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+
+.popout-VcNcHB {
+  fronteira: nenhum;
+  border-radius: var (- popout-radius);
+  estouro: automático! importante; }
+
+.option-3KoAJB: hover {
+  background-color: var (- background-modifier-hover); }
+.option-3KoAJB [aria-selected = true] {
+  cor de fundo: var (- selecionado com modificador de fundo); }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> AUMENTO DO SERVIDOR * /
+.cardWrapper-2Min21 {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.outer-1AjyKL: hover {
+  background-color: var (- card-color-hover); }
+
+.guild-Hq0WWA {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.guildHeader-3nh5RK,
+.guildSubscriptionSlots-JPXXvN {
+  cor de fundo: transparente; }
+
+.guildHeader-3nh5RK {
+  box-shadow: var (- popout-header-shadow); }
+
+.gemIndicatorProgressCircle-3wDFa1,
+.gemWithLabel-2aecE_ {
+  cor: var (- app-accent); }
+
+[class * = "theme-"] .gemIndicatorContainer-2jdECl {
+  cor de fundo: var (- cor do cartão); }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> OVERLAY * /
+.wrapper-3jrx9n {
+  border-color: var (- app-accent); }
+
+.selected-mKYnfr.option-n0icdO,
+.option-n0icdO: hover {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  border-color: var (- app-accent); }
+
+.container-1nZlH6 .input-1G2o7i {
+  cor de fundo: transparente! importante; }
+
+.container-CpszHS.recording-1H2dS7 {
+  border-color: rgba (var (- app-accent-rgb), 0,6)! importante;
+  sombra da caixa: 0 0 8px rgba (var (- app-accent-rgb), 0,5); }
+
+@keyframes shadowPulse-2kjgqQ {
+  0% {
+    sombra da caixa: 0 0 8px rgba (var (- app-accent-rgb), 0,5); }
+  50% {
+    sombra da caixa: 0 0 12px rgba (var (- app-accent-rgb), 0,8); }
+  para {
+    sombra da caixa: 0 0 8px rgba (var (- app-accent-rgb), 0,5); }}
+/ * CONFIGURAÇÕES DO USUÁRIO -> KEYBINDS * /
+.keybindGroup-JQs9x_ .container-1nZlH6 .input-1G2o7i {
+  cor de fundo: transparente! importante; }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> KEYBINDS -> KEYBINDS PADRÃO * /
+.keybindShortcut-1BD6Z1 span {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> ATIVIDADE DO JOGO * /
+.notDetected-33MY4s,
+.nowPlaying-284llR {
+  raio da borda: var (- raio do cartão); }
+
+[class * = "theme-"] .notDetected-33MY4s,
+[class * = "theme-"] .nowPlaying-284llR {
+  cor de fundo: var (- cor do cartão); }
+
+[class * = "theme-"] .addGamePopout-2RY8Ju {
+  cor de fundo: transparente; }
+
+.addGamePopout-2RY8Ju: before {
+  cor de fundo: rgba (0, 0, 0, 0,85); }
+
+.gameNameInput-385LoS {
+  margin-bottom: 4px;
+  preenchimento: 0 8px;
+  altura da linha: 32px;
+  raio da borda: 16px; }
+
+.header-2o-2hj .background-2uufRq {
+  cor: var (- app-accent); }
+
+.row-2OVM4t .background-2uufRq {
+  cor: var (- app-accent-text); }
+
+.game-1ipmAa .flowerStar-1GeTsn path {
+  preencher: var (- app-accent); }
+  .game-1ipmAa .flowerStar-1GeTsn path + .childContainer-1wxZNh path {
+    preencher: var (- app-accent-text); }
+
+[class * = "theme-"] .lastPlayed-3bQ7Bo {
+  cor: var (- texto normal); }
+
+/ * CONFIGURAÇÕES DO USUÁRIO -> IDIOMA * /
+.item-3eFBNF {
+  raio da borda: var (- raio do cartão); }
+  .item-3eFBNF: hover {
+    cor de fundo: var (- cor do cartão); }
+  .item-3eFBNF.selected-2DeaDa {
+    background-color: var (- card-color-hover); }
+  .item-3eFBNF .checked-3_4uQ9 {
+    cor de fundo: var (- app-accent)! importante; }
+    .item-3eFBNF .checked-3_4uQ9 path {
+      preencher: var (- app-accent-text)! importante; }
+
+[class * = "theme-"] .item-3eFBNF {
+  sombra da caixa: nenhum; }
+
+[class * = "theme-"] .checkbox-1ix_J3 {
+  border-color: var (- interativo-normal); }
+
+/ *
+ *
+ * CONFIGURAÇÕES DO SERVIDOR
+ *
+ * /
+.container-1nZlH6 {
+  raio da borda: 20px; }
+
+[class * = "theme-"] .container-1nZlH6 {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  fronteira: nenhum; }
+
+.layout-RmPevB {
+  preenchimento: 0 12px 0 4px; }
+
+.container-2VW0UT {
+  cor de fundo: transparente! importante; }
+
+/ * SERVER SETTINGS -> ROLES * /
+.scroller-305q3I {
+  cor de fundo: transparente; }
+
+.group-2dAfBy {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: 14px; }
+
+.container-_phMUq {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão);
+  fronteira: nenhum; }
+  .container-_phMUq: hover {
+    background-color: var (- card-color-hover); }
+
+.container-3XJ8ns {
+  fronteira: nenhum; }
+
+/ * SERVER SETTINGS -> ROLES -> EDIT * /
+.roleDot-ZwSovK {
+  fronteira: nenhum; }
+
+.titleContainer-2CXtJo.titleElevated-c_kdi7, .titleContainer-2CXtJo.stickyHeaderElevated-I6QUOA,
+.header-2mZ9Ov.titleElevated-c_kdi7,
+.header-2mZ9Ov.stickyHeaderElevated-I6QUOA {
+  estouro: oculto; }
+  .titleContainer-2CXtJo.titleElevated-c_kdi7: antes, .titleContainer-2CXtJo.stickyHeaderElevated-I6QUOA: antes,
+  .header-2mZ9Ov.titleElevated-c_kdi7: antes,
+  .header-2mZ9Ov.stickyHeaderElevated-I6QUOA: antes de {
+    contente: " ";
+    posição: absoluta;
+    largura: calc (100% + (var (- margem app) * 2));
+    altura: calc (100% + (var (- margem app) * 2) + 24px);
+    superior: calc ((var (- app-margin) + 24px) * -1);
+    esquerda: calc (var (- app-margin) * -1);
+    imagem de fundo: var (- app-bg);
+    repetição de fundo: sem repetição;
+    posição de fundo: centro;
+    tamanho do fundo: capa;
+    anexo de fundo: fixo;
+    sombra da caixa: inserção 0 0 0 100vmax var (- main-content-color);
+    filtro: blur (var (- main-content-blur));
+    índice z: -1;
+    eventos de ponteiro: nenhum; }
+
+.previewContainer-1KQDJS {
+  raio da borda: var (- raio do cartão);
+  fronteira: nenhum; }
+  .previewContainer-1KQDJS .theme-light {
+    Mostrar nenhum; }
+  .previewContainer-1KQDJS .messageContainer-1DiFnQ {
+    cor de fundo: var (- cor do conteúdo principal); }
+
+/ * SERVER SETTINGS -> EMOJI * /
+.emojiRow-zIc7ZX .input-cIJ7To {
+  raio da borda: 13px; }
+
+/ * SERVER SETTINGS -> AUDIT LOG * /
+.auditLog-3jNbM6 {
+  fronteira: nenhum; }
+
+[class * = "theme-"] .headerClickable-2IVFo9,
+[class * = "theme-"] .headerDefault-1wrJcN,
+[class * = "theme-"] .headerExpanded-CUEwZ5,
+[class * = "theme-"] .changeDetails-bk98pu {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+[class * = "theme-"] .headerExpanded-CUEwZ5 {
+  raio da borda: var (- raio do cartão) var (- raio do cartão) 0 0; }
+
+[class * = "theme-"] .changeDetails-bk98pu {
+  border-radius: 0 0 var (- card-radius) var (- card-radius); }
+
+[class * = "theme-"] .divider-1pnAR2 {
+  Mostrar nenhum; }
+
+/ * CONFIGURAÇÕES DO SERVIDOR -> VISÃO GERAL DA COMUNIDADE * /
+.upsellContainer-L9xv7w {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.upsellFooter-ZYsio_ {
+  cor de fundo: transparente; }
+
+/ * SERVER SETTINGS -> SERVER INSIGHTS * /
+.error-20ZZpF,
+.developerPortalCtaWrapper-2XNafh {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+/ * SERVER SETTINGS -> PARTNER PROGRAM * /
+.featureCard-1RR4Tl,
+.checklistContainer-mFJZEJ {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.checklistHeader-1KWcEY {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+/ * CONFIGURAÇÕES DO SERVIDOR -> ATIVAR DESCOBERTA * /
+.card-3_CqkU {
+  raio da borda: var (- raio do cartão); }
+
+[classe * = "tema-"] .card-3_CqkU,
+[class * = "theme-"] .iconMask-30Tvqs {
+  cor de fundo: var (- cor do cartão); }
+
+.container-2w0lh0 {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.header-2Y0-A- {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+/ * SERVER SETTINGS -> TRIAGEM DE MEMBROS * /
+.enableContainer-2DIT9Q,
+.settingsFormItem-103g1I,
+.formFieldWrapper-malor5 {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.formFieldWrapper-malor5 {
+  fronteira: nenhum; }
+
+/ * SERVER SETTINGS -> TRIAGEM DE MEMBROS -> PREVIEW * /
+.guildSidebar-2OCzWB {
+  cor de fundo: var (- cor de popout); }
+
+/ * SERVER SETTINGS -> WELCOME SCREEN * /
+.enableContainer-6E-puu,
+.previewContainer-1SS3uO,
+.welcomeChannel-1rFrIO {
+  cor de fundo: var (- cor do cartão); }
+
+.enableContainer-6E-puu {
+  raio da borda: var (- raio do cartão) var (- raio do cartão) 0 0;
+  box-shadow: var (- popout-header-shadow); }
+
+.previewContainer-1SS3uO {
+  border-radius: 0 0 var (- card-radius) var (- card-radius); }
+
+.welcomeChannel-1rFrIO {
+  raio da borda: var (- raio do cartão); }
+
+.descriptionWrapper-1GiGtP .inputDefault-_djjkz {
+  altura: automático; }
+
+/ * SERVER SETTINGS -> SERVER BOOST STATUS * /
+.side-8zPYf6 .item-PXvHYJ [style = "color: rgb (114, 137, 218);"] {
+  cor: var (- app-accent)! importante; }
+
+.side-8zPYf6 .item-PXvHYJ [style = "color: rgb (114, 137, 218); background-color: rgba (114, 137, 218, 0.1);"] {
+  cor de fundo: rgba (var (- app-accent-rgb), 0.1)! importante;
+  cor: var (- app-accent)! importante; }
+
+.side-8zPYf6 .item-PXvHYJ [style * = "background-color: rgb (114, 137, 218)"] {
+  cor de fundo: var (- app-accent)! importante;
+  cor: var (- app-accent-text)! importante; }
+
+.tier-3H4BXk {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+[class * = "theme-"] .tierHeader-rlkkJd,
+[class * = "theme-"] .tierBody-x9kBBp {
+  cor de fundo: transparente; }
+
+.tierHeader-rlkkJd {
+  box-shadow: var (- popout-header-shadow); }
+
+[class * = "theme-"] .tierAccomplished-2eXPdI,
+[class * = "theme-"] .tierCurrent-Lw7-4E,
+[class * = "theme-"] .tierDefault-2qaRkD {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image);
+  sombra da caixa: 0px 1px 2px rgba (0, 0, 0, 0,5); }
+
+[class * = "theme-"] .tierInProgress-3mBoXq {
+  cor de fundo: var (- cor do cartão); }
+
+[classe * = "theme-"] .background-3xPPFc {
+  cor: var (- cor do cartão); }
+
+/ * SERVER SETTINGS -> MEMBERS * /
+[class * = "theme-"] .popoutList-T9CKZQ,
+.container-VSDcQc {
+  cor de fundo: transparente;
+  border-radius: var (- popout-radius);
+  sombra da caixa: var (- sombra da janela); }
+
+[class * = "theme-"] .autocompleteShadow-iiGWFU {
+  sombra da caixa: nenhum; }
+
+[class * = "theme-"] .autocompleteArrow-Zxoy9H {
+  cor de fundo: var (- cor de popout); }
+
+[class * = "theme-"] .container-VSDcQc .header-2bNvm4,
+[class * = "theme-"] .container-VSDcQc .sectionTag-pXyto9 {
+  cor de fundo: transparente; }
+
+.container-VSDcQc .input-1ppKdn {
+  preenchimento: 0 8px;
+  raio da borda: 11px; }
+
+[class * = "theme-"] .selectableItem-1MP3MQ: hover {
+  background-color: var (- background-modifier-hover); }
+
+[class * = "theme-"] .member-1q7VfX,
+[class * = "theme-"] .inviteSettingsInviteRow-3p2O-N {
+  sombra da caixa: 0 1px 0 0 rgba (255, 255, 255, 0,1); }
+
+[classe * = "theme-"] .card-FDVird: antes de {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão);
+  fronteira: nenhum; }
+
+[class * = "theme-"] .member-1q7VfX .tag-1YGWN9 {
+  cor: var (- texto normal); }
+
+/ * SERVER SETTINGS -> CONVIDA * /
+[class * = "theme-"] .text-GwUZgS,
+[classe * = "theme-"] .title-2BxgL2 {
+  cor: var (- texto normal); }
+
+/ *
+ *
+ * DESCOBERTA DO SERVIDOR
+ *
+ * /
+[class * = "theme-"] .pageWrapper-1PgVDX {
+  cor de fundo: var (- cor do conteúdo principal); }
+
+/ * SERVER DISCOVERY -> SIDEBAR * /
+.categoryItem-3zFJns.selectedCategoryItem-3X8ujp {
+  cor: var (- app-accent-text); }
+  .categoryItem-3zFJns.selectedCategoryItem-3X8ujp .itemInner-3gVXMG {
+    cor de fundo: var (- app-accent);
+    background-image: var (- app-accent-image); }
+
+/ * SERVER DISCOVERY -> PRINCIPAL CONTEÚDO * /
+.search-1iTphC .searchBox-2_mAlO {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 17px;
+  fronteira: nenhum; }
+  .search-1iTphC .searchBox-2_mAlO .searchBoxInput-K6mkng {
+    preenchimento: 8px 12px;
+    cor de fundo: transparente! importante; }
+
+[classe * = "tema-"] .card-3DjzTQ {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+  [class * = "theme-"] .card-3DjzTQ: hover {
+    background-color: var (- card-color-hover); }
+
+/ *
+ *
+ * ABA INICIAL
+ *
+ * /
+.privateChannels-1nO12o,
+.scroller-1JbKMe,
+.nowPlayingColumn-2sl4cE {
+  cor de fundo: transparente; }
+
+.sidebar-2K8pFh {
+  cor de fundo: var (- cor da barra lateral); }
+
+.container-3Mxszk,
+[class * = "theme-"] .container-1D34oG {
+  cor de fundo: var (- cor do conteúdo principal); }
+
+/ * GUIA INICIAL -> ENCONTRE OU INICIE UMA CONVERSA * /
+.scroller-zPkAnE {
+  margem: 0;
+  cor de fundo: transparente;
+  overflow-y: auto! important; }
+
+.input-2VB9rf {
+  altura: 42px;
+  altura da linha: 42px;
+  preenchimento: 0 16px;
+  raio da borda: 21px;
+  tamanho da fonte: 1.15em; }
+
+/ * HOME TAB -> AMIGOS * /
+.actionButton-uPB8Fs,
+.actionButton-uPB8Fs.highlight-Lf97TE {
+  cor de fundo: var (- cor do conteúdo principal); }
+
+.tabBody-3YRQ8W: antes de {
+  Mostrar nenhum; }
+
+.peopleListItem-2nzedh: último do tipo {
+  margin-bottom: 16px; }
+
+.tabBar-ZmDY9v .item-3HknzM [style * = "background-color: rgb (67, 181, 129)"] {
+  cor de fundo: var (- app-accent)! importante;
+  cor: var (- app-accent-text)! importante; }
+
+/ * HOME TAB -> AMIGOS -> ATIVO AGORA * /
+.wrapper-3D2qGf,
+.emptyCard-1RJw8n {
+  cor de fundo: var (- cor do cartão);
+  transição: var (- tempo de transição) var (- tipo de transição); }
+
+[class * = "theme-"] .outer-1AjyKL.active-1xchHY,
+[class * = "theme-"] .outer-1AjyKL.interactive-3B9GmY: hover {
+  background-color: var (- card-color-hover); }
+
+[class * = "theme-"] .inset-3sAvek {
+  cor de fundo: transparente; }
+
+.wrapper-3Rixsz,
+.emptyCard-1RJw8n,
+.memberListItem-31QoHj {
+  border-radius: var (- popout-radius); }
+
+[class * = "theme-"] .enabled-1t_Gxm: passar o mouse,
+[class * = "theme-"] .memberListItem-31QoHj: not (.popoutDisabled-2RK7MF): hover {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image); }
+
+[class * = "theme-"] .enabled-1t_Gxm: hover .colorStandard-2KCXvj,
+[class * = "theme-"] .memberListItem-31QoHj: not (.popoutDisabled-2RK7MF): hover .colorStandard-2KCXvj {
+  cor: var (- app-accent-text); }
+
+[class * = "theme-"] .separator-XqIyoz {
+  cor de fundo: rgba (255, 255, 255, 0,2); }
+
+[class * = "theme-"] .applicationStreamingPreviewWrapper-8QqvVY {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+.image-1npAv8 {
+  raio da borda: var (- raio do cartão); }
+
+/ * TAB PÁGINA INICIAL -> AMIGOS -> ADICIONE AMIGO * /
+.wrapper-1cBijl {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 26px;
+  fronteira: nenhum;
+  transição: var (- tempo de transição) var (- tipo de transição); }
+  .wrapper-1cBijl: focus-within {
+    cor de fundo: rgba (var (- textarea-color), 0,65); }
+
+.addFriendInput-4bcerK, .addFriendInput-4bcerK: focus {
+  cor de fundo: transparente! importante; }
+
+/ * HOME TAB -> BIBLIOTECA * /
+.scroller-1IIF0A,
+.header-39GIC8 {
+  cor de fundo: transparente; }
+
+.libraryHeader-3g95kE {
+  raio da borda: 0;
+  fronteira: nenhum; }
+
+.textCell-1aBIUP {
+  cor: var (- texto normal); }
+
+/ * HOME TAB -> BIBLIOTECA -> BAIXANDO O JOGO * /
+.gameUpdates-2GPqBU {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+.progressCellText-3avmMz {
+  cor: var (- texto normal); }
+
+/ * HOME TAB -> BIBLIOTECA -> CONFIGURAÇÕES * /
+.scroller-2XE8rp {
+  cor de fundo: transparente; }
+
+/ * HOME TAB -> NITRO * /
+.applicationStore-1pNvnv {
+  cor de fundo: var (- cor do conteúdo principal); }
+
+.scroller-9moviB {
+  cor de fundo: transparente; }
+
+[class * = "theme-"] .feature-2w65J5,
+.banner-WELp4M {
+  cor de fundo: var (- cor do cartão);
+  raio da borda: var (- raio do cartão); }
+
+/ *
+ *
+ * MENSAGENS DIRETAS
+ *
+ * /
+.incomingCallInner-2VmFiR {
+  fronteira: nenhum; }
+
+.input-2A_zIr {
+  border-radius: var (- input-radius); }
+
+.input-2A_zIr: foco,
+.outer-o9SjPm: hover .input-2A_zIr {
+  sombra da caixa: nenhum; }
+
+.outer-o9SjPm: hover .input-2A_zIr {
+  cor de fundo: rgba (var (- textarea-color), 0,25); }
+
+/ * MENSAGENS DIRETAS -> CHAMADA DE VOZ * /
+.wrapper-2qzCYF.minimum-28Z35l {
+  cor de fundo: transparente;
+  box-shadow: var (- popout-header-shadow); }
+
+/ *
+ *
+ * PARTILHA DE TELA
+ *
+ * /
+.wrapper-2qzCYF {
+  cor de fundo: transparente; }
+  .wrapper-2qzCYF.normal-1oavYI {
+    box-shadow: var (- popout-header-shadow); }
+  .wrapper-2qzCYF .flexCenter-2Y_vCg {
+    cor de fundo: # 000;
+    transição: 250ms facilitam a cor de fundo; }
+  .wrapper-2qzCYF .flexCenter-2Y_vCg [style * = "padding-right: 236px"] {
+    cor de fundo: transparente; }
+
+/ * SCREEN SHARE -> CONFIGURAÇÕES * /
+.art-1qgogX + formulário .header-1TKi98 {
+  sombra da caixa: nenhum; }
+
+.segmentControl-1bEQH5 {
+  box-shadow: var (- popout-header-shadow); }
+
+.tile-2w4k5N: hover .sourceThumbnail-27dolk,
+.sourceThumbnail-27dolk.selected-1nOkyc {
+  sombra da caixa: inserção 0 0 0 2px var (- app-accent); }
+
+.card-2Mz_4z {
+  cor de fundo: rgba (var (- textarea-color), 0,5);
+  raio da borda: 20px;
+  fronteira: nenhum; }
+
+[class * = "theme-"] .item-3T2z1R {
+  fronteira: nenhum; }
+
+.item-3T2z1R: primeiro filho {
+  border-radius: 15px 0 0 15px; }
+.item-3T2z1R: último filho {
+  border-radius: 0 15px 15px 0; }
+
+.selectorButton-EEUWed {
+  cor de fundo: rgba (var (- textarea-color), 0,5); }
+
+.selectorButtonSelected-t5V9On,
+.selectorButton-EEUWed: not (.selectorButtonPremiumRequired-mKMbIu): hover {
+  cor de fundo: var (- app-accent);
+  background-image: var (- app-accent-image); }
+
+.selectorTextSelected-1ymya_,
+.selectorButton-EEUWed: not (.selectorButtonPremiumRequired-mKMbIu): hover .selectorText-2I7fQU {
+  cor: var (- app-accent-text); }
+
+/ * SCREEN SHARE -> PiP * /
+.pictureInPictureWindow-1B5qSe {
+  border-radius: var (- popout-radius);
+  sombra da caixa: var (- sombra da janela); }
+
+.media-ya5FZp {
+  border-radius: var (- popout-radius); }
+
+/ *
+ *
+ * MELHORES CONFIGURAÇÕES DE DISCORDAGEM
+ *
+ * /
+# bd-settings-sidebar .ui-tab-bar-item {
+  margin-bottom: 2px; }
+
+[class * = "theme-"] # bd-settings-sidebar .ui-tab-bar-item.selected {
+  cor de fundo: var (- selecionado com modificador de fundo); }
+
+[class * = "theme-"] # bd-settingspane-container .ui-switch-item .style-description {
+  cor: var (- cabeçalho secundário); }
+
+/ * BETTERDISCORD -> CUSTOM CSS * /
+.ace_editor {
+  posição: relativa;
+  estouro: visível; }
+
+.contentColumnDefault-1VQkGM .ace_editor {
+  margem: 295px 0 0 0; }
+  .contentColumnDefault-1VQkGM .ace_editor: before {
+    posição: absoluta;
+    content: "Para alterar as cores, como o acento, copie o código abaixo em \ A o CSS personalizado. Mais variáveis ​​podem ser encontradas na página de repositório GitHub \ A do tema. bit.ly/TranslucenceDiscord\A\A: root {\ A \ 9 - app-bg: url (https://i.imgur.com/U8bSjj5.jpg)! Important; \ A \ 9 - app-blur: 6px! Important; \ A \ 9 - app- margem: 24px! important; \ A \ 9 - app-radius: 8px! important; \ A \ 9 - app-accent: # d73d3d! important; \ A \ 9 - app-accent-rgb: 215,61 , 61! Important; \ A \ 9 - app-accent-text: # 000! Important; \ A} ";
+    display: bloco;
+    largura: calc (100% - 32px);
+    topo: -295px;
+    esquerda: 0;
+    preenchimento: 16px;
+    fundo: var (- cor do cartão);
+    raio da borda: var (- raio do cartão);
+    espaço em branco: pré;
+    tamanho da fonte: 16px;
+    color: #eee;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monoespaço, serif! important; }
+
+/ *
+ *
+ * BARRAS DE ROLAGEM
+ *
+ * /
+:: - webkit-scrollbar {
+  largura: var (- largura da barra de rolagem)! importante; }
+
+:: - webkit-scrollbar-thumb {
+  fundo: rgba (var (- scrollbar-color), var (- scrollbar-opacity))! important;
+  border-radius: calc (var (- scrollbar-width) / 2)! importante; }
+  :: - webkit-scrollbar-thumb: hover {
+    fundo: rgba (var (- scrollbar-color), var (- scrollbar-opacity-hover))! important; }
+
+:: - webkit-scrollbar,
+:: - webkit-scrollbar-track,
+:: - webkit-scrollbar-track-piece,
+.scroller-zPkAnE :: - webkit-scrollbar-track {
+  fundo: transparente! importante;
+  cor da borda: transparente! importante; }
+
+/ * BARRAS DE ROLAGEM -> BARRA DE ROLAGEM CLARA * /
+.root-1gCeng :: - webkit-scrollbar-thumb,
+.root-2QSv-c .scroller-GApUBG :: - webkit-scrollbar-thumb,
+.root-SR8cQa .infoScroller-3EYYns :: - webkit-scrollbar-thumb,
+.modal-yWgWj- .scrollerBase-289Jih :: - webkit-scrollbar-thumb,
+.uploadModal-2ifh8j :: - webkit-scrollbar-thumb,
+.body-3iLsc4 :: - webkit-scrollbar-thumb,
+.listScroller-2_vlfo :: - webkit-scrollbar-thumb,
+.messagesPopout-24nkyi :: - webkit-scrollbar-thumb,
+.scroller-tlc3kG :: - webkit-scrollbar-thumb,
+.scroller-3GIiMh :: - webkit-scrollbar-thumb,
+.scroller-2CvAgC :: - webkit-scrollbar-thumb,
+.autocompleteScroller-iInVqR :: - webkit-scrollbar-thumb,
+.sourceScroller-Pk7YAM :: - webkit-scrollbar-thumb,
+.content-1LAB8Z :: - webkit-scrollbar-thumb,
+.container-2dqNWc :: - webkit-scrollbar-thumb,
+.roleMemberList-3mYYYB :: - webkit-scrollbar-thumb,
+.roles-2tZ5Iq :: - webkit-scrollbar-thumb {
+  plano de fundo: rgba (var (- scrollbar-color-alt), 0,09)! importante; }
+  .root-1gCeng :: - webkit-scrollbar-thumb: hover,
+  .root-2QSv-c .scroller-GApUBG :: - webkit-scrollbar-thumb: hover,
+  .root-SR8cQa .infoScroller-3EYYns :: - webkit-scrollbar-thumb: hover,
+  .modal-yWgWj- .scrollerBase-289Jih :: - webkit-scrollbar-thumb: hover,
+  .uploadModal-2ifh8j :: - webkit-scrollbar-thumb: hover,
+  .body-3iLsc4 :: - webkit-scrollbar-thumb: hover,
+  .listScroller-2_vlfo :: - webkit-scrollbar-thumb: hover,
+  .messagesPopout-24nkyi :: - webkit-scrollbar-thumb: hover,
+  .scroller-tlc3kG :: - webkit-scrollbar-thumb: hover,
+  .scroller-3GIiMh :: - webkit-scrollbar-thumb: hover,
+  .scroller-2CvAgC :: - webkit-scrollbar-thumb: hover,
+  .autocompleteScroller-iInVqR :: - webkit-scrollbar-thumb: hover,
+  .sourceScroller-Pk7YAM :: - webkit-scrollbar-thumb: hover,
+  .content-1LAB8Z :: - webkit-scrollbar-thumb: hover,
+  .container-2dqNWc :: - webkit-scrollbar-thumb: hover,
+  .roleMemberList-3mYYYB :: - webkit-scrollbar-thumb: hover,
+  .roles-2tZ5Iq :: - webkit-scrollbar-thumb: hover {
+    plano de fundo: rgba (var (- scrollbar-color-alt), 0.15)! importante; }
+
+/ * BARRAS DE ROLAGEM -> REMOVER BARRA DE ROLAGEM * /
+.wrapper-3NnKdC [class * = "scroller"] :: - webkit-scrollbar {
+  largura: 0px! importante; }
+
+/ *
+ *
+ * PLUGINS COM SUPORTE
+ *
+ * /
+/ * SUPPORTED PLUGINS -> CharCounter * /
+.charCounter-7fw40k {
+  posição: relativa;
+  índice z: 1; }
+
+.chatCounter-XOMPsh {
+  inferior: automático; }
+
+.counter-uAzbKp {
+  largura: 100%;
+  altura: 35px;
+  preenchimento: 0 16px;
+  altura da linha: 35px;
+  border-top: 1px solid rgba (255, 255, 255, 0,15);
+  dimensionamento da caixa: caixa de borda;
+  alinhamento de texto: direita;
+  peso da fonte: 500; }
+
+/ * SUPPORTED PLUGINS -> EditUploads * /
+#EditUploadsModal {
+  cor de fundo: var (- cor de popout); }
+
+#EditUploadsToolbar {
+  cor de fundo: transparente; }
+
+/ * SUPPORTED PLUGINS -> HideChannels * /
+.sidebar-2K8pFh.hideElement .container-3baos1 {
+  posição: absoluta;
+  estouro: oculto; }
+  .sidebar-2K8pFh.hideElement .container-3baos1, .sidebar-2K8pFh.hideElement .container-3baos1: antes de {
+    cor de fundo: transparente! importante;
+    raio da borda: 0;
+    sombra da caixa: nenhum! importante; }
+  .sidebar-2K8pFh.hideElement .container-3baos1: antes de {
+    sombra da caixa: inserção 0 0 0 100vmax var (- cor do conteúdo principal)! importante; }
+
+/ * SUPPORTED PLUGINS -> ServerSearch * /
+.popoutRight-1veHKi.noArrow-2foL9g {
+  estouro: oculto; }
